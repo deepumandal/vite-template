@@ -21,7 +21,28 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+
+    // paths
+    "paths": {
+      // assets
+      "@Fonts/*": ["./src/assets/fonts/*"],
+      "@Styles/*": ["./src/assets/styles/*"],
+      "@Svg/*": ["./src/assets/svg/*"],
+
+      // components
+      "@Hooks/*": ["./src/components/hooks/*"],
+      "@Shared/*": ["./src/components/shared/*"],
+      "@UI/*": ["./src/components/ui/*"],
+      "@config/*": ["./src/components/config/*"],
+
+      // Higher order components
+      "@HOC": ["./src/hoc/*"],
+
+      // utils
+      "@utils": ["./src/utils/*"]
+    }
   },
-  "include": ["src"]
+  "include": ["src"],
+  "exclude": ["node_modules"]
 }

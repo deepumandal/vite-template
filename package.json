@@ -7,9 +7,12 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "prettier:write": "pnpm exec prettier . --write",
+    "Prettier:preview": "npx prettier . --check"
   },
   "dependencies": {
+    "prettier": "3.3.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
@@ -20,6 +23,9 @@
     "@typescript-eslint/parser": "^7.15.0",
     "@vitejs/plugin-react-swc": "^3.5.0",
     "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-react": "^7.34.4",
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-react-refresh": "^0.4.7",
     "typescript": "^5.2.2",
