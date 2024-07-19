@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/husky.sh"
+
+echo "🌟 Starting the code commit process! 🚀"
+
+# Run lint-staged script
+yarn run lint-staged
+
+# Display a completion message
+echo "✅ Code commit process completed successfully! 🎉"

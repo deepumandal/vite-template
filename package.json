@@ -9,7 +9,11 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "prettier:write": "pnpm exec prettier . --write",
-    "Prettier:preview": "npx prettier . --check"
+    "Prettier:preview": "npx prettier . --check",
+    "lint-staged": "lint-staged",
+    "prepare": "husky",
+    "spellcheck": "cspell src/**/*.{ts,tsx,css}",
+    "check-types": "npx tsc --noEmit "
   },
   "dependencies": {
     "prettier": "3.3.3",
@@ -17,18 +21,35 @@
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
+    "@cspell/eslint-plugin": "^8.11.0",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@typescript-eslint/eslint-plugin": "^7.15.0",
     "@typescript-eslint/parser": "^7.15.0",
     "@vitejs/plugin-react-swc": "^3.5.0",
+    "cspell": "^8.11.0",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-jsx-a11y": "^6.9.0",
     "eslint-plugin-prettier": "^5.2.1",
     "eslint-plugin-react": "^7.34.4",
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-react-refresh": "^0.4.7",
+    "husky": "^9.1.1",
+    "lint-staged": "^15.2.7",
     "typescript": "^5.2.2",
     "vite": "^5.3.4"
+  },
+  "lint-staged": {
+    "src/**/*.{ts,tsx}": [
+      "prettier --write",
+      "eslint --fix",
+      "yarn spellcheck"
+    ],
+    "src/**/*.css": [
+      "prettier --write",
+      "yarn spellcheck"
+    ]
   }
 }

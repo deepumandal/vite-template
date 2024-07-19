@@ -6,38 +6,44 @@ module.exports = {
     "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",
     "plugin:react/jsx-runtime",
+    "plugin:import/recommended",
     "plugin:react-hooks/recommended",
-    "plugin:prettier/recommended"
+    "plugin:jsx-a11y/recommended",
+    "plugin:@cspell/recommended",
+    "plugin:prettier/recommended",
   ],
   ignorePatterns: ["dist", ".eslintrc.cjs"],
   parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaVersion: "latest",
     sourceType: "module",
-    // project: "./tsconfig.app.json", facing Error: Cannot read file 'C:\Users\devwo\OneDrive\Desktop\Projects\tsconfig.json'.
+    project: ["./tsconfig.json", "./tsconfig.node.json", "./tsconfig.app.json"],
+    tsconfigRootDir: __dirname,
+    sourceType: "module",
+    // project: "./tsconfig.json", facing Error: Cannot read file 'C:\Users\devwo\OneDrive\Desktop\Projects\tsconfig.json'.
     ecmaFeatures: {
-      jsx: true
-    }
+      jsx: true,
+    },
   },
   plugins: ["react-refresh", "react"],
   rules: {
     // built in vite rules
     "react-refresh/only-export-components": [
       "warn",
-      { allowConstantExport: true }
+      { allowConstantExport: true },
     ],
 
     // prettier rules for code foramting
     "prettier/prettier": [
       "error",
       {
-        bracketSpacing: true,
         printWidth: 80,
         trailingComma: "es5",
         bracketSpacing: true,
         bracketSameLine: false,
-        arrowParens: "always"
-      }
+        arrowParens: "always",
+        endOfLine: "auto",
+      },
     ],
 
     // react rules
@@ -47,32 +53,62 @@ module.exports = {
       "error",
       {
         namedComponents: "arrow-function",
-        unnamedComponents: "arrow-function"
-      }
+        unnamedComponents: "arrow-function",
+      },
     ],
     "arrow-body-style": ["error", "as-needed"],
     "no-unused-vars": "error",
-    "react/jsx-filename-extension": ["warn", { extensions: [".jsx", ".tsx"] }]
+    "react/jsx-filename-extension": ["warn", { extensions: [".jsx", ".tsx"] }],
+
+    // extras
+    "import/no-unresolved": "error",
+    "import/no-duplicates": "error",
+    "react/prop-types": "off",
+    "react/no-this-in-sfc": "error",
+    "no-useless-call": "error",
+    "no-nested-ternary": "off",
+    "no-useless-return": "error",
+    "no-console": ["error", { allow: ["log", "warn", "error"] }],
+    "@typescript-eslint/no-shadow": "error",
+
+    // import order
+    "import/order": [
+      "error",
+      {
+        groups: [
+          "builtin",
+          "index",
+          "sibling",
+          "parent",
+          "internal",
+          "external",
+          "object",
+          "type",
+        ],
+      },
+    ],
+    "import/exports-last": "error",
+    "import/newline-after-import": "error",
   },
   settings: {
     react: {
-      version: "detect"
+      version: "detect",
+    },
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"],
     },
     "import/resolver": {
-      typescript: {
-        directory: "./tsconfig.json"
-      },
+      // typescript: {
+      // alwaysTryTypes: true,
+      // project: [
+      //   "./tsconfig.json",
+      //   "./tsconfig.node.json",
+      //   "./tsconfig.app.json",
+      // ],
+      // },
       node: {
-        extensions: [".js", ".jsx", ".ts", ".tsx"]
-      }
-    }
-  }
+        extensions: [".js", ".jsx", ".ts", ".tsx"],
+      },
+    },
+  },
 };
-
-/**
- * need to implement more things here 
- *  "plugin:import/errors",
-    "plugin:import/warnings",
-    "plugin:jsx-a11y/recommended",
-    "plugin:react-hooks/recommended"
- */
