@@ -12,7 +12,7 @@
     "Prettier:preview": "npx prettier . --check",
     "lint-staged": "lint-staged",
     "prepare": "husky",
-    "spellcheck": "cspell src/**/*.{ts,tsx,css}",
+    "spellcheck": "cspell src/**/*.{ts,tsx,css} --show-suggestions",
     "check-types": "npx tsc --noEmit "
   },
   "dependencies": {
@@ -45,11 +45,15 @@
     "src/**/*.{ts,tsx}": [
       "prettier --write",
       "eslint --fix",
-      "yarn spellcheck"
+      "pnpm spellcheck"
     ],
     "src/**/*.css": [
       "prettier --write",
-      "yarn spellcheck"
+      "pnpm spellcheck"
     ]
+  },
+  "engines": {
+    "node": ">=20",
+    "pnpm": ">=9"
   }
 }
