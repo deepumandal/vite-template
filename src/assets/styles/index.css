@@ -1,5 +1,8 @@
 /**
- * import custom hooks from here.
- *
- * You should not change this file without necessary requirements.
+ * do not change this file.
  */
+
+/* theme colors  */
+@import url("./RootStyle/index.css");
+
+/* component/ui style */

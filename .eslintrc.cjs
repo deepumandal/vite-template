@@ -10,6 +10,10 @@ module.exports = {
     "plugin:react-hooks/recommended",
     "plugin:jsx-a11y/recommended",
     "plugin:@cspell/recommended",
+    // "plugin:tailwindcss/recommended",
+    // "plugin:readable-tailwind/warning",
+    // enable all recommended rules to error
+    // "plugin:readable-tailwind/error",
     "plugin:prettier/recommended",
   ],
   ignorePatterns: ["dist", ".eslintrc.cjs"],
@@ -20,12 +24,11 @@ module.exports = {
     project: ["./tsconfig.json", "./tsconfig.node.json", "./tsconfig.app.json"],
     tsconfigRootDir: __dirname,
     sourceType: "module",
-    // project: "./tsconfig.json", facing Error: Cannot read file 'C:\Users\devwo\OneDrive\Desktop\Projects\tsconfig.json'.
     ecmaFeatures: {
       jsx: true,
     },
   },
-  plugins: ["react-refresh", "react"],
+  plugins: ["react-refresh", "react", "readable-tailwind"],
   rules: {
     // built in vite rules
     "react-refresh/only-export-components": [
@@ -89,6 +92,9 @@ module.exports = {
     ],
     "import/exports-last": "error",
     "import/newline-after-import": "error",
+
+    // tailwind css rules
+    // "readable-tailwind/multiline": ["warn", { printWidth: 80 }], something wents wrong here
   },
   settings: {
     react: {
@@ -100,7 +106,7 @@ module.exports = {
     "import/resolver": {
       // typescript: {
       // alwaysTryTypes: true,
-      // project: [
+      // directory: [
       //   "./tsconfig.json",
       //   "./tsconfig.node.json",
       //   "./tsconfig.app.json",
