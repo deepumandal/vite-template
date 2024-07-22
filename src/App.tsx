@@ -1,11 +1,15 @@
+import { Block } from "@UI/Block";
+import { Container } from "@UI/Container";
+// import { Flex } from "@UI/Flex";
+
 const App = () => (
-  <div
-    className={`
-      h-screen w-full border border-red-500 bg-red-300
-      hover:border-2 hover:border-blue-400 hover:bg-slate-400
-    `}
-  >
-    hello
-  </div>
+  <Container border ScreenType="full-screen">
+    <Container asElement="nav" border>
+      {/* <Flex justifyContent="center" asElement="section"> */}
+      <Block asElement="div"> hello</Block>
+      <Block asElement="div"> world</Block>
+      {/* </Flex> */}
+    </Container>
+  </Container>
 );
 export default App;

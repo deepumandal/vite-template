@@ -1,9 +1,10 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
+import tsconfigPaths from "vite-tsconfig-paths";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(), tsconfigPaths()],
   resolve: {
     alias: {
       // assets
@@ -14,14 +15,14 @@ export default defineConfig({
       // components
       "@Hooks/*": "./src/components/hooks/*",
       "@Shared/*": "./src/components/shared/*",
-      "@UI/*": "./src/components/ui/*",
+      "@UI/*": "./src/components/ui/**",
       "@config/*": "./src/components/config/*",
 
       // Higher order components
-      "@HOC": "./src/hoc/*",
+      "@HOC/*": "./src/hoc/*",
 
       // utils
-      "@utils": "./src/utils/*",
+      "@Utils/*": "./src/utils/*",
     },
   },
 });

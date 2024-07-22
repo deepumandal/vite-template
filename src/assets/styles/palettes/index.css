@@ -1,0 +1,24 @@
+:root {
+  /* primary colors */ /* This is majorly used color in web i.e background color */
+  --primary: #e2e8f0;
+  --primary-dark: blue;
+
+  /* secondary color */ /* This is second majorly used color in web i.e foreground color */
+  --secondary: blue;
+  --secondary-dark: blue;
+
+  /* create tertiary color more to add more color variants */
+
+  /* ascent color */ /*  this colors is solid highlighted color mostly used in buttons links user-select  */
+
+  --ascent: blue;
+  --ascent-dark: blue;
+
+  /* heading colors */
+  --heading: blue;
+  --heading-dark: blue;
+
+  /* text colors */
+  --text: blue;
+  --text: blue;
+}

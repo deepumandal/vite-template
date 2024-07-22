@@ -1,7 +1,15 @@
+@import url("assets/styles/index.css");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer {
-  @import url("assets/styles/index.css");
+/* Hide Scroll Bar */
+@layer utilities {
+  .Hide-Scroll-Track::-webkit-scrollbar {
+    display: none;
+  }
+  .Hide-Scroll-Track {
+    -ms-overflow-style: none;
+  }
 }
