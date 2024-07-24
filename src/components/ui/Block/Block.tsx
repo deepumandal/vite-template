@@ -1,21 +1,9 @@
-import { BackgroundColorType, BackgroundColor } from "@UI/Common";
+import { FC } from "react";
+import { BackgroundColor, CommonProps } from "@UI/Common";
 import { type ClassType, cn } from "@Utils/className";
-import { AriaRole, FC, ReactNode } from "react";
 
-type BlockElement = "div" | "section" | "article" | "aside";
-
-type BlockProps = {
-  children: ReactNode;
-  className?: ClassType;
-  id?: string;
-  ariaLabel?: string;
-  ariaDescribedBy?: string;
-  ariaLive?: "off" | "polite" | "assertive";
-  role?: AriaRole;
-  customStyles?: string;
-  asElement: BlockElement;
-  border?: boolean;
-  backgroundColor?: BackgroundColorType;
+type BlockProps = CommonProps<"block"> & {
+  // add if need
 };
 
 /**
@@ -88,7 +76,6 @@ const Block: FC<BlockProps> = ({
     className={cn(
       "p-4",
       border && "border border-red",
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
       BackgroundColor[background] as ClassType,
 
       className

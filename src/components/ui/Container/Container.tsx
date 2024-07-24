@@ -1,17 +1,10 @@
-import { BackgroundColor, BackgroundColorType } from "@UI/Common/Background";
+import { FC } from "react";
+import { CommonProps } from "@UI/Common/interfaces";
+import { BackgroundColor } from "@UI/Common/theme";
 import { type ClassType, cn } from "@Utils/className";
-import { AriaRole, FC, ReactNode } from "react";
 
-type asElement = "header" | "footer" | "nav" | "main";
-
-type ContainerProps = {
-  children: ReactNode;
-  className?: ClassType;
-  asElement: asElement;
-  role?: AriaRole;
-  ScreenType?: "container" | "full-screen";
-  border?: boolean;
-  backgroundColor?: BackgroundColorType;
+type ContainerProps = CommonProps<"container"> & {
+  ScreenType: "container" | "full-screen";
   fullHeight?: boolean;
 };
 
@@ -66,7 +59,6 @@ const Container: FC<ContainerProps> = ({
       "p-2 overflow-x-hidden Hide-Scroll-Track mx-auto",
       ScreenType == "container" ? "container" : "w-full",
       border && "border border-red",
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
       BackgroundColor[background] as ClassType,
       fullHeight ? "h-full min-h-screen" : "",
       className

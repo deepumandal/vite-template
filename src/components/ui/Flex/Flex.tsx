@@ -1,3 +1,6 @@
+import { AriaRole, FC } from "react";
+import { BackgroundColor, CommonProps } from "@UI/Common";
+import { type ClassType, cn } from "@Utils/className";
 import {
   FlexDirectionType,
   FlexElementType,
@@ -9,26 +12,30 @@ import {
   directionObj,
   justifyObj,
 } from "./utils/style-object";
-import { type ClassType, cn } from "@Utils/className";
-import { BackgroundColor, BackgroundColorType } from "@UI/Common";
-import { AriaRole, FC, ReactNode } from "react";
 
-type FlexProps = {
-  children: ReactNode;
-  className?: ClassType;
-  id?: string;
-  ariaLabel?: string;
-  ariaDescribedBy?: string;
-  ariaLive?: "off" | "polite" | "assertive";
-  role?: AriaRole;
-  customStyles?: string;
-  asElement: FlexElementType;
+// type FlexProps = {
+//   children: ReactNode;
+//   className?: ClassType;
+//   id?: string;
+//   ariaLabel?: string;
+//   ariaDescribedBy?: string;
+//   ariaLive?: "off" | "polite" | "assertive";
+//   role?: AriaRole;
+//   customStyles?: string;
+//   asElement: FlexElementType;
+//   flexDirection?: FlexDirectionType;
+//   justifyContent?: JustifyContentType;
+//   alignItems?: AlignItemsType;
+//   alignContent?: AlignContentType;
+//   border?: boolean;
+//   backgroundColor?: BackgroundColorType;
+// };
+
+type FlexProps = CommonProps<"flex"> & {
   flexDirection?: FlexDirectionType;
   justifyContent?: JustifyContentType;
   alignItems?: AlignItemsType;
   alignContent?: AlignContentType;
-  border?: boolean;
-  backgroundColor?: BackgroundColorType;
 };
 
 /**
@@ -110,13 +117,12 @@ const Flex: FC<FlexProps> = ({
     aria-live={ariaLive}
     role={role}
     className={cn(
-      "flex ",
+      "flex",
       border && "border border-red",
       justifyObj[justifyContent],
       directionObj[flexDirection],
       alignItemsObj[alignItems],
       alignContentObj[alignContent],
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
       BackgroundColor[background] as ClassType,
       className
     )}

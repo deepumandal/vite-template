@@ -12,4 +12,8 @@
   .Hide-Scroll-Track {
     -ms-overflow-style: none;
   }
+  .gridLines > *,
+  .gridLines {
+    @apply border border-dashed border-red;
+  }
 }
