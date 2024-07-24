@@ -2,9 +2,9 @@ import { BackgroundColorType, BackgroundColor } from "@UI/Common";
 import { type ClassType, cn } from "@Utils/className";
 import { AriaRole, FC, ReactNode } from "react";
 
-type BlockElement = "div" | "section" | "article" | "aside";
+type GridElement = "div" | "section" | "article" | "aside";
 
-type BlockProps = {
+type GridProps = {
   children: ReactNode;
   className?: ClassType;
   id?: string;
@@ -13,43 +13,43 @@ type BlockProps = {
   ariaLive?: "off" | "polite" | "assertive";
   role?: AriaRole;
   customStyles?: string;
-  asElement: BlockElement;
+  asElement: GridElement;
   border?: boolean;
   backgroundColor?: BackgroundColorType;
 };
 
 /**
- * Block component for wrapping content with performance and SEO optimizations.
- * The Block component renders a specified block-level HTML element with optional attributes
+ * Grid component for wrapping content with performance and SEO optimizations.
+ * The Grid component renders a specified Grid-level HTML element with optional attributes
  * to improve accessibility and SEO. It supports custom styling and provides additional
  * attributes such as `id`, `aria-label`, `aria-describedby`, and `aria-live`
- * to enhance the accessibility of the component. It also allows for different block-level
+ * to enhance the accessibility of the component. It also allows for different Grid-level
  * elements to be used for various layout needs.
  *
- * @param {BlockProps} props - The props for the Block component.
- * @param {ReactNode} props.children - The content to be wrapped by the block.
- * @param {ClassType} [props.className] - Additional class names to apply to the block.
- * @param {string} [props.id] - Optional ID for the block, useful for CSS or JavaScript targeting.
- * @param {string} [props.ariaLabel] - Optional ARIA label for the block to improve accessibility.
+ * @param {GridProps} props - The props for the Grid component.
+ * @param {ReactNode} props.children - The content to be wrapped by the Grid.
+ * @param {ClassType} [props.className] - Additional class names to apply to the Grid.
+ * @param {string} [props.id] - Optional ID for the Grid, useful for CSS or JavaScript targeting.
+ * @param {string} [props.ariaLabel] - Optional ARIA label for the Grid to improve accessibility.
  * @param {string} [props.ariaDescribedBy] - Optional ARIA described-by ID to provide more context.
  * @param {"off" | "polite" | "assertive"} [props.ariaLive] - Optional ARIA live region settings for dynamic content updates.
  * @param {AriaRole} [props.role] - The ARIA role to apply for accessibility. Defaults to "region".
  * @param {string} [props.customStyles] - Additional custom styles to apply inline.
- * @param {BlockElement} [props.asElement] - The HTML element to use for the block. Defaults to "div".
+ * @param {GridElement} [props.asElement] - The HTML element to use for the Grid. Defaults to "div".
  *
- * @returns {JSX.Element} The rendered block component.
+ * @returns {JSX.Element} The rendered Grid component.
  *
  * @example
  * // Basic usage
- * <Block>
+ * <Grid>
  *   <p>Your content here</p>
- * </Block>
+ * </Grid>
  *
  * @example
  * // With custom ID, ARIA attributes, and styles
- * <Block
+ * <Grid
  *   id="unique-id"
- *   ariaLabel="Description of the block"
+ *   ariaLabel="Description of the Grid"
  *   ariaDescribedBy="description-id"
  *   ariaLive="polite"
  *   role="region"
@@ -57,16 +57,16 @@ type BlockProps = {
  * >
  *   <h2>Header</h2>
  *   <p>Content with additional attributes and custom styles</p>
- * </Block>
+ * </Grid>
  *
  * @example
  * // Using a different HTML element
- * <Block asElement="section">
+ * <Grid asElement="section">
  *   <h2>Section Header</h2>
  *   <p>Content inside a section element</p>
- * </Block>
+ * </Grid>
  */
-const Block: FC<BlockProps> = ({
+const Grid: FC<GridProps> = ({
   children,
   className,
   id,
@@ -78,7 +78,7 @@ const Block: FC<BlockProps> = ({
   border,
   backgroundColor: background = "primary",
   ...rest
-}: BlockProps): JSX.Element => (
+}: GridProps): JSX.Element => (
   <Element
     id={id}
     aria-label={ariaLabel}
@@ -99,5 +99,5 @@ const Block: FC<BlockProps> = ({
   </Element>
 );
 
-export { type BlockProps };
-export default Block;
+export { type GridProps };
+export default Grid;

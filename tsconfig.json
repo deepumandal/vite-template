@@ -34,7 +34,7 @@
       "@Hooks/*": ["./src/components/hooks/*"],
       "@Shared/*": ["./src/components/shared/*"],
       "@UI/*": ["./src/components/ui/*"],
-      "@config/*": ["./src/components/config/*"],
+      "@Config/*": ["./src/components/config/*"],
 
       // Higher order components
       "@HOC/*": ["./src/hoc/*"],
@@ -47,9 +47,6 @@
   "exclude": ["node_modules"],
   "files": [],
   "references": [
-    // {
-    //   "path": "./tsconfig.app.json"
-    // },
     {
       "path": "./tsconfig.node.json"
     }

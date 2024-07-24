@@ -1,3 +1,4 @@
+import { BackgroundColor, BackgroundColorType } from "@UI/Common/Background";
 import { type ClassType, cn } from "@Utils/className";
 import { AriaRole, FC, ReactNode } from "react";
 
@@ -6,10 +7,12 @@ type asElement = "header" | "footer" | "nav" | "main";
 type ContainerProps = {
   children: ReactNode;
   className?: ClassType;
-  asElement?: asElement;
+  asElement: asElement;
   role?: AriaRole;
   ScreenType?: "container" | "full-screen";
   border?: boolean;
+  backgroundColor?: BackgroundColorType;
+  fullHeight?: boolean;
 };
 
 /**
@@ -50,27 +53,29 @@ type ContainerProps = {
  */
 const Container: FC<ContainerProps> = ({
   children,
-  asElement,
+  asElement: Element,
   className,
   role,
-  ScreenType = "full-screen",
+  ScreenType = "container",
   border,
-}) => {
-  const Element = asElement ?? "main";
-  return (
-    <Element
-      className={cn(
-        "p-2 overflow-x-hidden Hide-Scroll-Track mx-auto",
-        ScreenType == "container" ? "container" : "w-full max-w-[1350px]",
-        border && "border border-red",
-        className
-      )}
-      role={role ?? "main"}
-    >
-      {children}
-    </Element>
-  );
-};
+  backgroundColor: background = "primary",
+  fullHeight,
+}) => (
+  <Element
+    className={cn(
+      "p-2 overflow-x-hidden Hide-Scroll-Track mx-auto",
+      ScreenType == "container" ? "container" : "w-full",
+      border && "border border-red",
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+      BackgroundColor[background] as ClassType,
+      fullHeight ? "h-full min-h-screen" : "",
+      className
+    )}
+    role={role ?? "main"}
+  >
+    {children}
+  </Element>
+);
 
 export { type ContainerProps };
 export default Container;

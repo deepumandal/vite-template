@@ -1,15 +1,7 @@
 {
   "version": "0.2",
   "language": "en",
-  "words": [
-    "Imenu",
-    "Mandal",
-    "tincidunt",
-    "nextui",
-    "toastify",
-    "formik",
-    "Formik"
-  ],
+  "words": [],
   "ignorePaths": ["node_modules", "dist", "build"],
   "ignoreWords": []
 }
