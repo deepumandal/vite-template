@@ -1,6 +1,6 @@
 import { FC } from "react";
-import { CommonProps } from "@UI/Common/interfaces";
-import { BackgroundColor } from "@UI/Common/theme";
+import { CommonProps } from "@Config/ui/interfaces";
+import { BackgroundColor } from "@Config/ui/theme";
 import { type ClassType, cn } from "@Utils/className";
 
 type ContainerProps = CommonProps<"container"> & {
@@ -63,7 +63,7 @@ const Container: FC<ContainerProps> = ({
       fullHeight ? "h-full min-h-screen" : "",
       className
     )}
-    role={role ?? "main"}
+    role={role}
   >
     {children}
   </Element>

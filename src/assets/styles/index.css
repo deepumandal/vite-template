@@ -3,6 +3,6 @@
  */
 
 /* theme colors  */
-@import url("./palettes/index.css");
+@import url("../../components/config/colors/palettes/index.css");
 
 /* component/ui style */

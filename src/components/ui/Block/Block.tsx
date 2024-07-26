@@ -61,7 +61,7 @@ const Block: FC<BlockProps> = ({
   ariaLabel,
   ariaDescribedBy,
   ariaLive,
-  role = "region",
+  role,
   asElement: Element,
   border,
   backgroundColor: background = "primary",

@@ -12,6 +12,7 @@ type GridProps = CommonProps<"Grid"> & {
   columns: GridColumnsType;
   gap?: GapType;
   gridLines?: boolean;
+  // aspectRatio
 };
 
 /**
@@ -27,7 +28,7 @@ const Grid: FC<GridProps> = ({
   ariaLabel,
   ariaDescribedBy,
   ariaLive,
-  role = "region",
+  role,
   asElement: Element,
   columns,
   gap = 0,

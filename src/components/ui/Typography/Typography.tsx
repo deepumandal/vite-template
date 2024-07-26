@@ -1,42 +1,9 @@
 import { AriaRole, FC } from "react";
 import { BackgroundColor, CommonProps } from "@UI/Common";
 import { type ClassType, cn } from "@Utils/className";
-import {
-  FlexDirectionType,
-  FlexElementType,
-  AlignContentType,
-  AlignItemsType,
-  JustifyContentType,
-  alignContentObj,
-  alignItemsObj,
-  directionObj,
-  justifyObj,
-} from "./utils/style-object";
+import TypographyClass from "./utils/TypographyClasses";
 
-// type FlexProps = {
-//   children: ReactNode;
-//   className?: ClassType;
-//   id?: string;
-//   ariaLabel?: string;
-//   ariaDescribedBy?: string;
-//   ariaLive?: "off" | "polite" | "assertive";
-//   role?: AriaRole;
-//   customStyles?: string;
-//   asElement: FlexElementType;
-//   flexDirection?: FlexDirectionType;
-//   justifyContent?: JustifyContentType;
-//   alignItems?: AlignItemsType;
-//   alignContent?: AlignContentType;
-//   border?: boolean;
-//   backgroundColor?: BackgroundColorType;
-// };
-
-type FlexProps = CommonProps<"flex"> & {
-  flexDirection?: FlexDirectionType;
-  justifyContent?: JustifyContentType;
-  alignItems?: AlignItemsType;
-  alignContent?: AlignContentType;
-};
+type TypographyProps = CommonProps<"Typography">;
 
 /**
  * Flex component for creating flexible and responsive layouts with performance and SEO optimizations.
@@ -47,7 +14,7 @@ type FlexProps = CommonProps<"flex"> & {
  * and `aria-live` to enhance accessibility. The component allows for flexible layout options
  * with properties like `flexDirection`, `justifyContent`, `alignItems`, and `alignContent`.
  *
- * @param {FlexProps} props - The props for the Flex component.
+ * @param {TypographyProps} props - The props for the Flex component.
  * @param {ReactNode} props.children - The content to be wrapped by the flex container.
  * @param {ClassType} [props.className] - Additional class names to apply to the flex container.
  * @param {string} [props.id] - Optional ID for the flex container, useful for CSS or JavaScript targeting.
@@ -93,7 +60,7 @@ type FlexProps = CommonProps<"flex"> & {
  *   <p>Content inside a section element with flex layout</p>
  * </Flex>
  */
-const Flex: FC<FlexProps> = ({
+const Typography: FC<TypographyProps> = ({
   children,
   className,
   id,
@@ -102,14 +69,10 @@ const Flex: FC<FlexProps> = ({
   ariaLive,
   role,
   asElement: Element,
-  flexDirection = "row",
-  justifyContent = "flex-start",
-  alignItems = "flex-start",
-  alignContent = "flex-start",
   border,
   backgroundColor: background = "primary",
   ...rest
-}: FlexProps): JSX.Element => (
+}: TypographyProps): JSX.Element => (
   <Element
     id={id}
     aria-label={ariaLabel}
@@ -118,11 +81,8 @@ const Flex: FC<FlexProps> = ({
     role={role}
     className={cn(
       "flex",
+      TypographyClass[Element as keyof TypographyProps],
       border && "border border-red",
-      justifyObj[justifyContent],
-      directionObj[flexDirection],
-      alignItemsObj[alignItems],
-      alignContentObj[alignContent],
       BackgroundColor[background] as ClassType,
       className
     )}
@@ -132,13 +92,5 @@ const Flex: FC<FlexProps> = ({
   </Element>
 );
 
-export {
-  type FlexProps,
-  type AlignContentType,
-  type AlignItemsType,
-  type AriaRole,
-  type FlexDirectionType,
-  type FlexElementType,
-  type JustifyContentType,
-};
-export default Flex;
+export { type TypographyProps, type AriaRole };
+export default Typography;

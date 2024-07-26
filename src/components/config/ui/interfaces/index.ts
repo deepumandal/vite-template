@@ -27,4 +27,16 @@ type CommonProps<T extends keyof ElementTypeMap> = P<T>;
 type CommonPropsExtendedHtmlAttribute<T extends keyof ElementTypeMap> = P<T> &
   HtmlHTMLAttributes<HTMLElement>;
 
+export {
+  type ContainerType,
+  type FlexType,
+  type BlockType,
+  type GridType,
+
+  // Element type map
+  type ElementTypeMap,
+  type AsElementType,
+  type ElementKeysTypeUnion,
+  type AllElementTypes,
+} from "./asElement";
 export { type CommonProps, type CommonPropsExtendedHtmlAttribute };
