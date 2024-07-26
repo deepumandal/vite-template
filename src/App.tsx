@@ -1,5 +1,4 @@
-/* eslint-disable react/display-name */
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { Block } from "@UI/Block";
 import { Container } from "@UI/Container";
 import { Flex } from "@UI/Flex";
@@ -8,10 +7,7 @@ import Typography from "@UI/Typography/Typography";
 
 const App = () => {
   const ref = useRef<HTMLElement>(null);
-  console.log("raff", ref);
-  useEffect(() => {
-    console.log("raff", ref);
-  }, []);
+
   return (
     <Container
       ref={ref}
@@ -62,13 +58,8 @@ const App = () => {
         <Typography asElement="span">hello span</Typography>
         <Typography asElement="strong">hello strong</Typography>
       </Block>
-      {/* <GrandChild /> */}
     </Container>
   );
 };
 
-// const GrandChild = forwardRef<HTMLDivElement>(function (_props, ref) {
-//   return <div ref={ref}>Deep!</div>;
-// })
-// GrandChild.displayName =
 export default App;
