@@ -1,7 +1,8 @@
-import { FC } from "react";
+import { forwardRef } from "react";
 import { CommonProps } from "@Config/ui/interfaces";
 import { BackgroundColor } from "@Config/ui/theme";
 import { type ClassType, cn } from "@Utils/className";
+import { AnyType } from "../../../@types/commonTypes";
 
 type ContainerProps = CommonProps<"container"> & {
   ScreenType: "container" | "full-screen";
@@ -44,30 +45,40 @@ type ContainerProps = CommonProps<"container"> & {
  *   <p>Content with container width and red border</p>
  * </Container>
  */
-const Container: FC<ContainerProps> = ({
-  children,
-  asElement: Element,
-  className,
-  role,
-  ScreenType = "container",
-  border,
-  backgroundColor: background = "primary",
-  fullHeight,
-}) => (
-  <Element
-    className={cn(
-      "p-2 overflow-x-hidden Hide-Scroll-Track mx-auto",
-      ScreenType == "container" ? "container" : "w-full",
-      border && "border border-red",
-      BackgroundColor[background] as ClassType,
-      fullHeight ? "h-full min-h-screen" : "",
-      className
-    )}
-    role={role}
-  >
-    {children}
-  </Element>
+const Container = forwardRef<AnyType, ContainerProps>(
+  (
+    {
+      children,
+      asElement: Element,
+      className,
+      role,
+      ScreenType = "container",
+      border,
+      backgroundColor: background = "primary",
+      fullHeight,
+      ...rest
+    }: ContainerProps,
+    ref
+  ): JSX.Element => (
+    <Element
+      ref={ref}
+      className={cn(
+        "p-2 overflow-x-hidden Hide-Scroll-Track mx-auto",
+        ScreenType == "container" ? "container" : "w-full",
+        border && "border border-red",
+        BackgroundColor[background] as ClassType,
+        fullHeight ? "h-full min-h-screen" : "",
+        className
+      )}
+      role={role}
+      {...rest}
+    >
+      {children}
+    </Element>
+  )
 );
+
+Container.displayName = "Container";
 
 export { type ContainerProps };
 export default Container;
