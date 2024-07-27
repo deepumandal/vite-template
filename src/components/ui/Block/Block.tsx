@@ -1,6 +1,7 @@
-import { FC } from "react";
+import { forwardRef } from "react";
 import { BackgroundColor, CommonProps } from "@UI/Common";
 import { type ClassType, cn } from "@Utils/className";
+import { AnyType } from "../../../@types/commonTypes";
 
 type BlockProps = CommonProps<"block"> & {
   // add if need
@@ -54,37 +55,44 @@ type BlockProps = CommonProps<"block"> & {
  *   <p>Content inside a section element</p>
  * </Block>
  */
-const Block: FC<BlockProps> = ({
-  children,
-  className,
-  id,
-  ariaLabel,
-  ariaDescribedBy,
-  ariaLive,
-  role,
-  asElement: Element,
-  border,
-  backgroundColor: background = "primary",
-  ...rest
-}: BlockProps): JSX.Element => (
-  <Element
-    id={id}
-    aria-label={ariaLabel}
-    aria-describedby={ariaDescribedBy}
-    aria-live={ariaLive}
-    role={role}
-    className={cn(
-      "p-4",
-      border && "border border-red",
-      BackgroundColor[background] as ClassType,
+const Block = forwardRef<AnyType, BlockProps>(
+  (
+    {
+      children,
+      className,
+      id,
+      ariaLabel,
+      ariaDescribedBy,
+      ariaLive,
+      role,
+      asElement: Element,
+      border,
+      backgroundColor: background = "primary",
+      ...rest
+    }: BlockProps,
+    ref
+  ): JSX.Element => (
+    <Element
+      ref={ref}
+      id={id}
+      aria-label={ariaLabel}
+      aria-describedby={ariaDescribedBy}
+      aria-live={ariaLive}
+      role={role}
+      className={cn(
+        "p-4",
+        border && "border border-red",
+        BackgroundColor[background] as ClassType,
 
-      className
-    )}
-    {...rest}
-  >
-    {children}
-  </Element>
+        className
+      )}
+      {...rest}
+    >
+      {children}
+    </Element>
+  )
 );
 
+Block.displayName = "Block";
 export { type BlockProps };
 export default Block;
