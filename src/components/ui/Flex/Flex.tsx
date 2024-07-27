@@ -1,4 +1,4 @@
-import { AriaRole, FC } from "react";
+import { AriaRole, forwardRef } from "react";
 import { BackgroundColor, CommonProps } from "@UI/Common";
 import { type ClassType, cn } from "@Utils/className";
 import {
@@ -12,24 +12,7 @@ import {
   directionObj,
   justifyObj,
 } from "./utils/style-object";
-
-// type FlexProps = {
-//   children: ReactNode;
-//   className?: ClassType;
-//   id?: string;
-//   ariaLabel?: string;
-//   ariaDescribedBy?: string;
-//   ariaLive?: "off" | "polite" | "assertive";
-//   role?: AriaRole;
-//   customStyles?: string;
-//   asElement: FlexElementType;
-//   flexDirection?: FlexDirectionType;
-//   justifyContent?: JustifyContentType;
-//   alignItems?: AlignItemsType;
-//   alignContent?: AlignContentType;
-//   border?: boolean;
-//   backgroundColor?: BackgroundColorType;
-// };
+import { AnyType } from "../../../@types/commonTypes";
 
 type FlexProps = CommonProps<"flex"> & {
   flexDirection?: FlexDirectionType;
@@ -93,44 +76,52 @@ type FlexProps = CommonProps<"flex"> & {
  *   <p>Content inside a section element with flex layout</p>
  * </Flex>
  */
-const Flex: FC<FlexProps> = ({
-  children,
-  className,
-  id,
-  ariaLabel,
-  ariaDescribedBy,
-  ariaLive,
-  role,
-  asElement: Element,
-  flexDirection = "row",
-  justifyContent = "flex-start",
-  alignItems = "flex-start",
-  alignContent = "flex-start",
-  border,
-  backgroundColor: background = "primary",
-  ...rest
-}: FlexProps): JSX.Element => (
-  <Element
-    id={id}
-    aria-label={ariaLabel}
-    aria-describedby={ariaDescribedBy}
-    aria-live={ariaLive}
-    role={role}
-    className={cn(
-      "flex",
-      border && "border border-red",
-      justifyObj[justifyContent],
-      directionObj[flexDirection],
-      alignItemsObj[alignItems],
-      alignContentObj[alignContent],
-      BackgroundColor[background] as ClassType,
-      className
-    )}
-    {...rest}
-  >
-    {children}
-  </Element>
+const Flex = forwardRef<AnyType, FlexProps>(
+  (
+    {
+      children,
+      className,
+      id,
+      ariaLabel,
+      ariaDescribedBy,
+      ariaLive,
+      role,
+      asElement: Element,
+      flexDirection = "row",
+      justifyContent = "flex-start",
+      alignItems = "flex-start",
+      alignContent = "flex-start",
+      border,
+      backgroundColor: background = "primary",
+      ...rest
+    }: FlexProps,
+    ref
+  ): JSX.Element => (
+    <Element
+      ref={ref}
+      id={id}
+      aria-label={ariaLabel}
+      aria-describedby={ariaDescribedBy}
+      aria-live={ariaLive}
+      role={role}
+      className={cn(
+        "flex",
+        border && "border border-red",
+        justifyObj[justifyContent],
+        directionObj[flexDirection],
+        alignItemsObj[alignItems],
+        alignContentObj[alignContent],
+        BackgroundColor[background] as ClassType,
+        className
+      )}
+      {...rest}
+    >
+      {children}
+    </Element>
+  )
 );
+
+Flex.displayName = "Flex";
 
 export {
   type FlexProps,
