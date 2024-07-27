@@ -10,7 +10,7 @@ const App = () => {
 
   return (
     <Container
-      ref={ref}
+      // ref={ref}
       asElement="main"
       ScreenType="container"
       fullHeight
@@ -21,6 +21,7 @@ const App = () => {
       </Container>
       <Container asElement="nav" ScreenType="full-screen" role="navigation">
         <Flex
+          ref={ref}
           asElement="section"
           justifyContent="space-evenly"
           alignItems="center"
