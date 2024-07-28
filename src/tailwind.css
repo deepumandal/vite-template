@@ -1,10 +1,10 @@
-@import url("assets/styles/index.css");
+@import "assets/styles/index.css";
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Hide Scroll Bar */
+/* Additional custom styles */
 @layer utilities {
   .Hide-Scroll-Track::-webkit-scrollbar {
     display: none;

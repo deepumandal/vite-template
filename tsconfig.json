@@ -31,10 +31,10 @@
       "@Svg/*": ["./src/assets/svg/*"],
 
       // components
-      "@Hooks/*": ["./src/components/hooks/*"],
-      "@Shared/*": ["./src/components/shared/*"],
-      "@UI/*": ["./src/components/ui/*"],
-      "@Config/*": ["./src/components/config/*"],
+      // "@Hooks/*": ["./src/components/hooks/*"],
+      // "@Shared/*": ["./src/components/shared/*"],
+      // "@UI/*": ["./src/components/ui/*"],
+      // "@Config/*": ["./src/components/config/*"],
 
       "@Components/*": ["./src/components/*"],
 

@@ -21,4 +21,7 @@
   /* text colors */
   --text: blue;
   --text: blue;
+
+  /* model colors */
+  --model-overlay: #000000c0;
 }

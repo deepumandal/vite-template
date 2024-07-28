@@ -1,1 +1,1 @@
-// export * from "@Config/ui";
+// export * from "@Components/config";
