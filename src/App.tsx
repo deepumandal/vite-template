@@ -5,6 +5,7 @@ import {
   Flex,
   Grid,
   GridItem,
+  Model,
   Typography,
 } from "@Components/ui";
 
@@ -66,6 +67,42 @@ const App = () => {
         <Typography asElement="span">hello span</Typography>
         <Typography asElement="strong">hello strong</Typography>
       </Block>
+
+      <Flex
+        asElement="div"
+        justifyContent="center"
+        alignItems="center"
+        className="h-96 mb-96"
+        border
+      >
+        <Model>
+          <Model.Trigger asChild>
+            <button className="outline-none">Open Model</button>
+          </Model.Trigger>
+          <Model.Portal>
+            <Model.Content>
+              <Model.Heading>Edit profile</Model.Heading>
+              <Model.Description>
+                Make changes to your profile here. Click save when done.
+              </Model.Description>
+
+              <div
+                style={{
+                  display: "flex",
+                  marginTop: 25,
+                  justifyContent: "flex-end",
+                }}
+              >
+                <Model.Close asChild>
+                  <button className=" text-blue-300 outline-none">
+                    Save changes
+                  </button>
+                </Model.Close>
+              </div>
+            </Model.Content>
+          </Model.Portal>
+        </Model>
+      </Flex>
     </Container>
   );
 };

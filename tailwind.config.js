@@ -1,6 +1,12 @@
 /** @type {import('tailwindcss').Config} */
+
 export default {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+    "./src/index.css",
+    "./src/assets/styles/index.css",
+  ],
   theme: {
     extend: {
       colors: {
@@ -8,6 +14,11 @@ export default {
         primary: {
           DEFAULT: "var(--primary)",
           // dark: "var(--primary-dark)",
+        },
+
+        // model overlay color
+        "model-overlay": {
+          DEFAULT: "var(--model-overlay)",
         },
       },
       container: {
