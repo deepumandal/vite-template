@@ -1,7 +1,7 @@
 import { forwardRef } from "react";
-import { BackgroundColor, CommonProps } from "@UI/Common";
+import { AnyType } from "@AppTypes/commonTypes";
+import { BackgroundColor, CommonProps } from "@Components/config";
 import { type ClassType, cn } from "@Utils/className";
-import { AnyType } from "../../../@types/commonTypes";
 
 type BlockProps = CommonProps<"block"> & {
   // add if need
@@ -94,5 +94,4 @@ const Block = forwardRef<AnyType, BlockProps>(
 );
 
 Block.displayName = "Block";
-export { type BlockProps };
-export default Block;
+export { type BlockProps, Block };

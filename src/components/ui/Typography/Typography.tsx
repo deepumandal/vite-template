@@ -1,7 +1,7 @@
-import { AriaRole, FC } from "react";
-import { BackgroundColor, CommonProps } from "@UI/Common";
+import { FC } from "react";
+import { BackgroundColor, CommonProps } from "@Components/config";
 import { type ClassType, cn } from "@Utils/className";
-import TypographyClass from "./utils/TypographyClasses";
+import { TypographyClass } from "./utils/TypographyClasses";
 
 type TypographyProps = CommonProps<"Typography">;
 
@@ -92,5 +92,4 @@ const Typography: FC<TypographyProps> = ({
   </Element>
 );
 
-export { type TypographyProps, type AriaRole };
-export default Typography;
+export { type TypographyProps, Typography };

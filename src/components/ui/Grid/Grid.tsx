@@ -1,5 +1,6 @@
 import { forwardRef } from "react";
-import { BackgroundColor, CommonProps } from "@UI/Common";
+import { AnyType } from "@AppTypes/commonTypes";
+import { BackgroundColor, CommonProps } from "@Components/config";
 import { type ClassType, cn } from "@Utils/className";
 import {
   gridColumnsObj,
@@ -7,7 +8,6 @@ import {
   GridColumnsType,
   GapType,
 } from "./utils/style-object";
-import { AnyType } from "../../../@types/commonTypes";
 
 type GridProps = CommonProps<"Grid"> & {
   columns: GridColumnsType;
@@ -66,5 +66,4 @@ const Grid = forwardRef<AnyType, GridProps>(
 );
 
 Grid.displayName = "Grid";
-export { type GridProps };
-export default Grid;
+export { type GridProps, Grid };

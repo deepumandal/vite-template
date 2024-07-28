@@ -1,5 +1,6 @@
 import { AriaRole, forwardRef } from "react";
-import { BackgroundColor, CommonProps } from "@UI/Common";
+import { AnyType } from "@AppTypes/commonTypes";
+import { BackgroundColor, CommonProps } from "@Components/config";
 import { type ClassType, cn } from "@Utils/className";
 import {
   FlexDirectionType,
@@ -12,7 +13,6 @@ import {
   directionObj,
   justifyObj,
 } from "./utils/style-object";
-import { AnyType } from "../../../@types/commonTypes";
 
 type FlexProps = CommonProps<"flex"> & {
   flexDirection?: FlexDirectionType;
@@ -124,6 +124,7 @@ const Flex = forwardRef<AnyType, FlexProps>(
 Flex.displayName = "Flex";
 
 export {
+  Flex,
   type FlexProps,
   type AlignContentType,
   type AlignItemsType,
@@ -132,4 +133,3 @@ export {
   type FlexElementType,
   type JustifyContentType,
 };
-export default Flex;

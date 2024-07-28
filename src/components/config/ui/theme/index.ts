@@ -1,4 +1,4 @@
-import { BackgroundType } from "@Config/colors";
+import { BackgroundType } from "@Components/config";
 
 type Props = {
   // eslint-disable-next-line no-unused-vars

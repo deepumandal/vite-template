@@ -36,11 +36,16 @@
       "@UI/*": ["./src/components/ui/*"],
       "@Config/*": ["./src/components/config/*"],
 
+      "@Components/*": ["./src/components/*"],
+
       // Higher order components
       "@HOC/*": ["./src/hoc/*"],
 
       // utils
-      "@Utils/*": ["./src/utils/*"]
+      "@Utils/*": ["./src/utils/*"],
+
+      // types
+      "@AppTypes/*": ["./src/@types/*"]
     }
   },
   "include": ["src", "tailwind.config.js", "postcss.config.js"],

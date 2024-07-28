@@ -19,5 +19,4 @@ const TypographyClass: TypographyClassType = {
   link: "text-base font-medium leading-relaxed tracking-normal text-blue-600 hover:text-blue-800",
 } as const;
 
-export { type TypographyClassType };
-export default TypographyClass;
+export { type TypographyClassType, TypographyClass };

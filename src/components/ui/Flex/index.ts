@@ -1,5 +1,5 @@
 export {
-  default as Flex,
+  Flex,
   type FlexProps,
   type AlignContentType,
   type AlignItemsType,

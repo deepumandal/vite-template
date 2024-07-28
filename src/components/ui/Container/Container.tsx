@@ -1,8 +1,7 @@
 import { forwardRef } from "react";
-import { CommonProps } from "@Config/ui/interfaces";
-import { BackgroundColor } from "@Config/ui/theme";
+import { AnyType } from "@AppTypes/commonTypes";
+import { CommonProps, BackgroundColor } from "@Components/config";
 import { type ClassType, cn } from "@Utils/className";
-import { AnyType } from "../../../@types/commonTypes";
 
 type ContainerProps = CommonProps<"container"> & {
   ScreenType: "container" | "full-screen";
@@ -80,5 +79,4 @@ const Container = forwardRef<AnyType, ContainerProps>(
 
 Container.displayName = "Container";
 
-export { type ContainerProps };
-export default Container;
+export { type ContainerProps, Container };

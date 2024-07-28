@@ -18,11 +18,16 @@ export default defineConfig({
       "@UI/*": "./src/components/ui/**",
       "@config/*": "./src/components/config/*",
 
+      "@Components/*": "./src/components/*",
+
       // Higher order components
       "@HOC/*": "./src/hoc/*",
 
       // utils
       "@Utils/*": "./src/utils/*",
+
+      // types
+      "@AppTypes/*": "./src/@types/*",
     },
   },
 });

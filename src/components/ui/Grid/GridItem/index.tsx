@@ -1,6 +1,6 @@
 import { AriaRole, forwardRef, ReactNode } from "react";
+import { AnyType } from "@AppTypes/commonTypes";
 import { type ClassType, cn } from "@Utils/className";
-import { AnyType } from "../../../../@types/commonTypes";
 
 type GridItemProps = {
   children: ReactNode;
@@ -51,5 +51,4 @@ const GridItem = forwardRef<AnyType, GridItemProps>(
 
 GridItem.displayName = "GridItem";
 
-export { type GridItemProps };
-export default GridItem;
+export { type GridItemProps, GridItem };

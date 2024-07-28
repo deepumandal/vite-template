@@ -1,9 +1,12 @@
 import { useRef } from "react";
-import { Block } from "@UI/Block";
-import { Container } from "@UI/Container";
-import { Flex } from "@UI/Flex";
-import { Grid, GridItem } from "@UI/Grid";
-import Typography from "@UI/Typography/Typography";
+import {
+  Block,
+  Container,
+  Flex,
+  Grid,
+  GridItem,
+  Typography,
+} from "@Components/ui";
 
 const App = () => {
   const ref = useRef<HTMLElement>(null);
@@ -37,6 +40,10 @@ const App = () => {
           <GridItem className="aspect-square">3</GridItem>
           <GridItem className="aspect-square">4</GridItem>
           <GridItem className="aspect-square">5</GridItem>
+          <GridItem className="aspect-square">6</GridItem>
+          <GridItem className="aspect-square">6</GridItem>
+          <GridItem className="aspect-square">6</GridItem>
+          <GridItem className="aspect-square">6</GridItem>
           <GridItem className="aspect-square">6</GridItem>
         </Grid>
       </Container>
