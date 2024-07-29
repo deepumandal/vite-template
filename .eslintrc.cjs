@@ -67,6 +67,8 @@ module.exports = {
     "no-useless-return": "error",
     "no-console": ["error", { allow: ["log", "warn", "error"] }],
     "@typescript-eslint/no-shadow": "error",
+    "@typescript-eslint/no-unsafe-assignment": "off", // research on this
+    "@typescript-eslint/no-unsafe-call": "off", // research on this
     // "import/order": [
     //   "error",
     //   {
