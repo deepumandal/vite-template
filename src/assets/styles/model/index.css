@@ -1,5 +1,3 @@
-@import "../root/index.css";
-
 @layer utilities {
   .model-overlay {
     @apply bg-model-overlay;

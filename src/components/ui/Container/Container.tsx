@@ -1,7 +1,7 @@
 import { forwardRef } from "react";
 import { AnyType } from "@AppTypes/commonTypes";
-import { CommonProps, BackgroundColor } from "@Components/config";
-import { type ClassType, cn } from "@Utils/className";
+import { CommonProps } from "@Components/config";
+import { cn } from "@Utils/className";
 
 type ContainerProps = CommonProps<"container"> & {
   ScreenType: "container" | "full-screen";
@@ -53,7 +53,6 @@ const Container = forwardRef<AnyType, ContainerProps>(
       role,
       ScreenType = "container",
       border,
-      backgroundColor: background = "primary",
       fullHeight,
       ...rest
     }: ContainerProps,
@@ -65,7 +64,8 @@ const Container = forwardRef<AnyType, ContainerProps>(
         "p-2 overflow-x-hidden Hide-Scroll-Track mx-auto",
         ScreenType == "container" ? "container" : "w-full",
         border && "border border-red",
-        BackgroundColor[background] as ClassType,
+        // BackgroundColor[background] as ClassType,
+        "bg-background",
         fullHeight ? "h-full min-h-screen" : "",
         className
       )}

@@ -1,26 +1,29 @@
-import { useRef } from "react";
-import {
-  Block,
-  Container,
-  Flex,
-  Grid,
-  GridItem,
-  Model,
-  Typography,
-} from "@Components/ui";
+import { useTheme } from "@Components/hooks";
+import { Container, Button, Flex } from "@Components/ui";
+import { Accordion } from "@Components/ui/Accordion";
 
-const App = () => {
-  const ref = useRef<HTMLElement>(null);
-
-  return (
-    <Container
-      // ref={ref}
-      asElement="main"
-      ScreenType="container"
-      fullHeight
-      className="px-20"
-    >
-      <Container asElement="nav" ScreenType="container" border>
+const App = () => (
+  <Container
+    // ref={ref}
+    asElement="main"
+    ScreenType="container"
+    fullHeight
+    border
+    className="px-20 "
+  >
+    <Button>hello</Button>
+    <ThemeBtn />
+    <Accordion type="single" collapsible>
+      <Accordion.AccordionItem value="item-1">
+        <Accordion.AccordionTrigger>
+          Is it accessible?
+        </Accordion.AccordionTrigger>
+        <Accordion.AccordionContent>
+          Yes. It adheres to the WAI-ARIA design pattern.
+        </Accordion.AccordionContent>
+      </Accordion.AccordionItem>
+    </Accordion>
+    {/* <Container asElement="nav" ScreenType="container" border>
         1
       </Container>
       <Container asElement="nav" ScreenType="full-screen" role="navigation">
@@ -66,44 +69,74 @@ const App = () => {
         <Typography asElement="p">hello p</Typography>
         <Typography asElement="span">hello span</Typography>
         <Typography asElement="strong">hello strong</Typography>
-      </Block>
+      </Block> */}
 
-      <Flex
-        asElement="div"
-        justifyContent="center"
-        alignItems="center"
-        className="h-96 mb-96"
-        border
+    {/* <Flex
+      asElement="div"
+      justifyContent="center"
+      alignItems="center"
+      className="h-96 mb-96"
+      border
+    >
+      <Model>
+        <Model.Trigger asChild>
+          <button className="outline-none">Open Model</button>
+        </Model.Trigger>
+        <Model.Portal>
+          <Model.Content>
+            <Model.Heading>Edit profile</Model.Heading>
+            <Model.Description>
+              Make changes to your profile here. Click save when done.
+            </Model.Description>
+
+            <div
+              style={{
+                display: "flex",
+                marginTop: 25,
+                justifyContent: "flex-end",
+              }}
+            >
+              <Model.Close asChild>
+                <button className=" text-blue-300 outline-none">
+                  Save changes
+                </button>
+              </Model.Close>
+            </div>
+          </Model.Content>
+        </Model.Portal>
+      </Model>
+    </Flex> */}
+    <button>open</button>
+  </Container>
+);
+
+const ThemeBtn = () => {
+  const { setTheme } = useTheme();
+
+  return (
+    <Flex asElement="div" backgroundColor="tertiary" className="space-x-3">
+      <Button
+        onClick={() => {
+          setTheme("dark");
+        }}
       >
-        <Model>
-          <Model.Trigger asChild>
-            <button className="outline-none">Open Model</button>
-          </Model.Trigger>
-          <Model.Portal>
-            <Model.Content>
-              <Model.Heading>Edit profile</Model.Heading>
-              <Model.Description>
-                Make changes to your profile here. Click save when done.
-              </Model.Description>
-
-              <div
-                style={{
-                  display: "flex",
-                  marginTop: 25,
-                  justifyContent: "flex-end",
-                }}
-              >
-                <Model.Close asChild>
-                  <button className=" text-blue-300 outline-none">
-                    Save changes
-                  </button>
-                </Model.Close>
-              </div>
-            </Model.Content>
-          </Model.Portal>
-        </Model>
-      </Flex>
-    </Container>
+        dark
+      </Button>
+      <Button
+        onClick={() => {
+          setTheme("light");
+        }}
+      >
+        light
+      </Button>
+      <Button
+        onClick={() => {
+          setTheme("system");
+        }}
+      >
+        system
+      </Button>
+    </Flex>
   );
 };
 
