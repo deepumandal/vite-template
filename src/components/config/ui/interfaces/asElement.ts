@@ -3,16 +3,11 @@ type FlexType = "div" | "section" | "article" | "aside";
 type BlockType = "div" | "section" | "article" | "aside";
 type GridType = "div" | "section" | "article" | "aside";
 type GridItemType = "div";
-type TypographyType =
-  | "h1"
-  | "h2"
-  | "h3"
-  | "h4"
-  | "h5"
-  | "h6"
-  | "p"
-  | "span"
-  | "strong";
+type HeadingType = "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+
+type TextType = "p" | "span" | "strong";
+
+type TypographyType = HeadingType | TextType;
 
 type ElementTypeMap = {
   container: ContainerType;
@@ -33,6 +28,9 @@ export {
   type BlockType,
   type GridType,
   type GridItemType,
+  type TypographyType,
+  type HeadingType,
+  type TextType,
 
   // Element type map
   type ElementTypeMap,

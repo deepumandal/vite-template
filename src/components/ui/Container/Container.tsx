@@ -27,7 +27,7 @@ const Container = forwardRef<AnyType, ContainerProps>(
       className={cn(
         "p-2 overflow-x-hidden Hide-Scroll-Track mx-auto",
         ScreenType == "container" ? "container" : "w-full",
-        border && "border border-red",
+        border && "border border-border-red",
         "bg-background",
         fullHeight ? "h-full min-h-screen" : "",
         className

@@ -1,11 +1,28 @@
-import { FC } from "react";
-import { CommonProps } from "@Components/config";
-import { cn } from "@Utils/className";
-import { TypographyClass } from "./utils/TypographyClasses";
+/* eslint-disable @typescript-eslint/no-unsafe-argument */
+/* eslint-disable @typescript-eslint/no-duplicate-type-constituents */
+/* eslint-disable @typescript-eslint/no-unnecessary-type-assertion */
+import {
+  CommonProps,
+  HeadingColorType,
+  TextColorType,
+} from "@Components/config";
+import { type ClassType, cn } from "@Utils/className";
+import {
+  HeadingVariants,
+  TextVariants,
+  TypographyClass,
+} from "./utils/TypographyClasses";
 
-type TypographyProps = CommonProps<"Typography">;
+type variantsType = HeadingColorType | TextColorType;
 
-const Typography: FC<TypographyProps> = ({
+type TypographyProps = Omit<CommonProps<"Typography">, "BackgroundColor"> & {
+  variants?: variantsType;
+};
+
+const isHeading = (T: string) =>
+  ["h1", "h2", "h3", "h4", "h5", "h6"].includes(T);
+
+const Typography = ({
   children,
   className,
   id,
@@ -13,8 +30,9 @@ const Typography: FC<TypographyProps> = ({
   ariaDescribedBy,
   ariaLive,
   role,
-  asElement: Element,
+  asElement: Element = "span",
   border,
+  variants = "default",
   ...rest
 }: TypographyProps): JSX.Element => (
   <Element
@@ -25,8 +43,9 @@ const Typography: FC<TypographyProps> = ({
     role={role}
     className={cn(
       "flex",
-      TypographyClass[Element as keyof TypographyProps],
+      TypographyClass[Element] as ClassType,
       border && "border border-red",
+      isHeading(Element) ? HeadingVariants[variants] : TextVariants[variants],
       className
     )}
     {...rest}

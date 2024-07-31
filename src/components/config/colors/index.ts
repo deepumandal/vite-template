@@ -2,17 +2,12 @@ type colors =
   | "default"
   | "primary"
   | "secondary"
-  | "background"
-  | "card"
   | "muted"
   | "accent"
-  | "destructive"
-  | "border"
-  | "input"
-  | "ring";
+  | "destructive";
 
 export {
-  type colors as BackgroundType,
-  type colors as HeadingType,
-  type colors as TextType,
+  type colors as BackgroundColorType,
+  type colors as HeadingColorType,
+  type colors as TextColorType,
 };
