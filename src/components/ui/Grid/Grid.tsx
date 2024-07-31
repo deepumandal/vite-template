@@ -1,7 +1,7 @@
 import { forwardRef } from "react";
 import { AnyType } from "@AppTypes/commonTypes";
-import { BackgroundColor, CommonProps } from "@Components/config";
-import { type ClassType, cn } from "@Utils/className";
+import { CommonProps } from "@Components/config";
+import { cn } from "@Utils/className";
 import {
   gridColumnsObj,
   gapObj,
@@ -34,10 +34,9 @@ const Grid = forwardRef<AnyType, GridProps>(
       role,
       asElement: Element,
       columns,
-      gap = 0,
+      gap = "0",
       border,
       gridLines,
-      backgroundColor: background = "primary",
       ...rest
     }: GridProps,
     ref
@@ -55,7 +54,6 @@ const Grid = forwardRef<AnyType, GridProps>(
         gridColumnsObj[columns],
         gapObj[gap],
         border && "border border-red",
-        BackgroundColor[background] as ClassType,
         className
       )}
       {...rest}

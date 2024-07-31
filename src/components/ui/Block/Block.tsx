@@ -1,11 +1,9 @@
 import { forwardRef } from "react";
 import { AnyType } from "@AppTypes/commonTypes";
-import { BackgroundColor, CommonProps } from "@Components/config";
-import { type ClassType, cn } from "@Utils/className";
+import { CommonProps } from "@Components/config";
+import { cn } from "@Utils/className";
 
-type BlockProps = CommonProps<"block"> & {
-  // add if need
-};
+type BlockProps = CommonProps<"block"> & object;
 
 /**
  * Block component for wrapping content with performance and SEO optimizations.
@@ -67,7 +65,6 @@ const Block = forwardRef<AnyType, BlockProps>(
       role,
       asElement: Element,
       border,
-      backgroundColor: background = "primary",
       ...rest
     }: BlockProps,
     ref
@@ -79,13 +76,7 @@ const Block = forwardRef<AnyType, BlockProps>(
       aria-describedby={ariaDescribedBy}
       aria-live={ariaLive}
       role={role}
-      className={cn(
-        "p-4",
-        border && "border border-red",
-        BackgroundColor[background] as ClassType,
-
-        className
-      )}
+      className={cn("p-4", border && "border border-red", className)}
       {...rest}
     >
       {children}

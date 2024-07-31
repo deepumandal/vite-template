@@ -57,10 +57,6 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        // model overlay color
-        "model-overlay": {
-          DEFAULT: "var(--model-overlay)",
-        },
       },
       borderRadius: {
         lg: `var(--radius)`,

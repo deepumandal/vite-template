@@ -5,9 +5,9 @@
  */
 
 import { AriaRole, HtmlHTMLAttributes, ReactNode } from "react";
+import { type BackgroundType } from "@Components/config";
 import { ClassType } from "@Utils/className";
 import { type AsElementType, type ElementTypeMap } from "./asElement";
-import { BackgroundColorType } from "../theme";
 
 interface P<T extends keyof ElementTypeMap> {
   children: ReactNode;
@@ -19,7 +19,7 @@ interface P<T extends keyof ElementTypeMap> {
   ariaLive?: "off" | "polite" | "assertive";
   role?: AriaRole;
   border?: boolean;
-  backgroundColor?: BackgroundColorType;
+  BackgroundColor?: BackgroundType;
 }
 
 type CommonProps<T extends keyof ElementTypeMap> = P<T>;

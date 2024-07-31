@@ -1,28 +1,74 @@
 import { useTheme } from "@Components/hooks";
-import { Container, Button, Flex } from "@Components/ui";
+import {
+  Container,
+  Button,
+  Flex,
+  Grid,
+  GridItem,
+  Model,
+  Typography,
+} from "@Components/ui";
 import { Accordion } from "@Components/ui/Accordion";
 
 const App = () => (
   <Container
-    // ref={ref}
     asElement="main"
     ScreenType="container"
     fullHeight
     border
-    className="px-20 "
+    className="px-20"
+    BackgroundColor="default"
   >
-    <Button>hello</Button>
-    <ThemeBtn />
-    <Accordion type="single" collapsible>
-      <Accordion.AccordionItem value="item-1">
-        <Accordion.AccordionTrigger>
-          Is it accessible?
-        </Accordion.AccordionTrigger>
-        <Accordion.AccordionContent>
-          Yes. It adheres to the WAI-ARIA design pattern.
-        </Accordion.AccordionContent>
-      </Accordion.AccordionItem>
-    </Accordion>
+    <Flex asElement="section" BackgroundColor="destructive">
+      <Typography asElement="h1">hello</Typography>
+    </Flex>
+    <Grid asElement="div" columns="5" border>
+      <GridItem>
+        <Button>hello</Button>
+      </GridItem>
+      <GridItem>
+        <ThemeBtn />
+      </GridItem>
+      <GridItem>
+        <Accordion type="single" collapsible>
+          <Accordion.AccordionItem value="item-1">
+            <Accordion.AccordionTrigger>
+              Is it accessible?
+            </Accordion.AccordionTrigger>
+            <Accordion.AccordionContent>
+              Yes. It adheres to the WAI-ARIA design pattern.
+            </Accordion.AccordionContent>
+          </Accordion.AccordionItem>
+        </Accordion>
+      </GridItem>
+    </Grid>
+    <Model>
+      <Model.Trigger asChild>
+        <button className="outline-none">Open Model</button>
+      </Model.Trigger>
+      <Model.Portal>
+        <Model.Content>
+          <Model.Heading>Edit profile</Model.Heading>
+          <Model.Description>
+            Make changes to your profile here. Click save when done.
+          </Model.Description>
+
+          <div
+            style={{
+              display: "flex",
+              marginTop: 25,
+              justifyContent: "flex-end",
+            }}
+          >
+            <Model.Close asChild>
+              <button className=" text-blue-300 outline-none">
+                Save changes
+              </button>
+            </Model.Close>
+          </div>
+        </Model.Content>
+      </Model.Portal>
+    </Model>
     {/* <Container asElement="nav" ScreenType="container" border>
         1
       </Container>
@@ -78,33 +124,7 @@ const App = () => (
       className="h-96 mb-96"
       border
     >
-      <Model>
-        <Model.Trigger asChild>
-          <button className="outline-none">Open Model</button>
-        </Model.Trigger>
-        <Model.Portal>
-          <Model.Content>
-            <Model.Heading>Edit profile</Model.Heading>
-            <Model.Description>
-              Make changes to your profile here. Click save when done.
-            </Model.Description>
-
-            <div
-              style={{
-                display: "flex",
-                marginTop: 25,
-                justifyContent: "flex-end",
-              }}
-            >
-              <Model.Close asChild>
-                <button className=" text-blue-300 outline-none">
-                  Save changes
-                </button>
-              </Model.Close>
-            </div>
-          </Model.Content>
-        </Model.Portal>
-      </Model>
+      
     </Flex> */}
     <button>open</button>
   </Container>
@@ -114,7 +134,7 @@ const ThemeBtn = () => {
   const { setTheme } = useTheme();
 
   return (
-    <Flex asElement="div" backgroundColor="tertiary" className="space-x-3">
+    <Flex asElement="div" className="space-x-3">
       <Button
         onClick={() => {
           setTheme("dark");
