@@ -1,8 +1,43 @@
-@import "assets/styles/index.css";
+@import "assets/styles/index.css"; /*  will look here latter */
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --background: theme(colors.sky.100);
+    --heading: theme(colors.gray.100);
+    --text: theme(colors.gray.900);
+    --accent: theme(colors.red.900);
+    --muted: theme(colors.slate.600);
+    --primary: theme(colors.blue.900);
+    --secondary: theme(colors.slate.100);
+    --destructive: theme(colors.rose.900);
+    /* 
+    * - notification colors  
+    * - input box colors
+    * - border 
+    */
+  }
+
+  .dark {
+    --background: theme(colors.slate.950);
+    --heading: theme(colors.gray.50);
+    --text: theme(colors.gray.100);
+    --accent: theme(colors.red.500);
+    --muted: theme(colors.slate.700);
+    --primary: theme(colors.blue.400);
+    --secondary: theme(colors.slate.900);
+    --destructive: theme(colors.rose.500);
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-background;
+  }
+}
 
 /* Additional custom styles */
 @layer utilities {
@@ -14,6 +49,6 @@
   }
   .gridLines > *,
   .gridLines {
-    @apply border border-dashed border-red;
+    @apply border border-dashed border-border-red;
   }
 }

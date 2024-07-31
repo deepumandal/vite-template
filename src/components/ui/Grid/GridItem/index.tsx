@@ -1,17 +1,20 @@
-import { AriaRole, forwardRef, ReactNode } from "react";
+import { forwardRef } from "react";
 import { AnyType } from "@AppTypes/commonTypes";
+import { CommonProps } from "@Components/config";
+import { color } from "@Components/ui/Common/colors-blocks";
 import { type ClassType, cn } from "@Utils/className";
 
-type GridItemProps = {
-  children: ReactNode;
-  className?: ClassType;
-  id?: string;
-  ariaLabel?: string;
-  ariaDescribedBy?: string;
-  ariaLive?: "off" | "polite" | "assertive";
-  role?: AriaRole;
-  border?: boolean;
-};
+// type GridItemProps = {
+//   children: ReactNode;
+//   className?: ClassType;
+//   id?: string;
+//   ariaLabel?: string;
+//   ariaDescribedBy?: string;
+//   ariaLive?: "off" | "polite" | "assertive";
+//   role?: AriaRole;
+//   border?: boolean;
+// };
+type GridItemProps = CommonProps<"GridItem"> & object;
 
 /**
  * GridItem component for individual grid items.
@@ -29,6 +32,7 @@ const GridItem = forwardRef<AnyType, GridItemProps>(
       ariaDescribedBy,
       ariaLive,
       role = "region",
+      BackgroundColor = "default",
       border,
       ...rest
     }: GridItemProps,
@@ -41,7 +45,11 @@ const GridItem = forwardRef<AnyType, GridItemProps>(
       aria-describedby={ariaDescribedBy}
       aria-live={ariaLive}
       role={role}
-      className={cn(border && "border border-red", className)}
+      className={cn(
+        border && "border border-red",
+        color[BackgroundColor] as ClassType,
+        className
+      )}
       {...rest}
     >
       {children}

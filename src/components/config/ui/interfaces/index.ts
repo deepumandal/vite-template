@@ -5,21 +5,21 @@
  */
 
 import { AriaRole, HtmlHTMLAttributes, ReactNode } from "react";
+import { type BackgroundColorType } from "@Components/config";
 import { ClassType } from "@Utils/className";
 import { type AsElementType, type ElementTypeMap } from "./asElement";
-import { BackgroundColorType } from "../theme";
 
 interface P<T extends keyof ElementTypeMap> {
   children: ReactNode;
   className?: ClassType;
-  asElement: AsElementType<T>;
+  asElement?: AsElementType<T>;
   id?: string;
   ariaLabel?: string;
   ariaDescribedBy?: string;
   ariaLive?: "off" | "polite" | "assertive";
   role?: AriaRole;
   border?: boolean;
-  backgroundColor?: BackgroundColorType;
+  BackgroundColor?: BackgroundColorType;
 }
 
 type CommonProps<T extends keyof ElementTypeMap> = P<T>;
@@ -27,16 +27,5 @@ type CommonProps<T extends keyof ElementTypeMap> = P<T>;
 type CommonPropsExtendedHtmlAttribute<T extends keyof ElementTypeMap> = P<T> &
   HtmlHTMLAttributes<HTMLElement>;
 
-export {
-  type ContainerType,
-  type FlexType,
-  type BlockType,
-  type GridType,
-
-  // Element type map
-  type ElementTypeMap,
-  type AsElementType,
-  type ElementKeysTypeUnion,
-  type AllElementTypes,
-} from "./asElement";
+export * from "./asElement";
 export { type CommonProps, type CommonPropsExtendedHtmlAttribute };

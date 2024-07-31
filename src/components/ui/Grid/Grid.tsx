@@ -1,13 +1,14 @@
 import { forwardRef } from "react";
 import { AnyType } from "@AppTypes/commonTypes";
-import { BackgroundColor, CommonProps } from "@Components/config";
-import { type ClassType, cn } from "@Utils/className";
+import { CommonProps } from "@Components/config";
+import { ClassType, cn } from "@Utils/className";
 import {
   gridColumnsObj,
   gapObj,
   GridColumnsType,
   GapType,
 } from "./utils/style-object";
+import { color } from "../Common/colors-blocks";
 
 type GridProps = CommonProps<"Grid"> & {
   columns: GridColumnsType;
@@ -32,12 +33,12 @@ const Grid = forwardRef<AnyType, GridProps>(
       ariaDescribedBy,
       ariaLive,
       role,
-      asElement: Element,
+      asElement: Element = "div",
       columns,
-      gap = 0,
+      gap = "0",
       border,
       gridLines,
-      backgroundColor: background = "primary",
+      BackgroundColor = "default",
       ...rest
     }: GridProps,
     ref
@@ -55,7 +56,7 @@ const Grid = forwardRef<AnyType, GridProps>(
         gridColumnsObj[columns],
         gapObj[gap],
         border && "border border-red",
-        BackgroundColor[background] as ClassType,
+        color[BackgroundColor] as ClassType,
         className
       )}
       {...rest}
