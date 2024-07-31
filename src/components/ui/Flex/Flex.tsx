@@ -32,7 +32,7 @@ const Flex = forwardRef<AnyType, FlexProps>(
       ariaDescribedBy,
       ariaLive,
       role,
-      asElement: Element,
+      asElement: Element = "div",
       flexDirection = "row",
       justifyContent = "flex-start",
       alignItems = "flex-start",

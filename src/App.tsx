@@ -17,14 +17,13 @@ const App = () => (
     fullHeight
     border
     className="px-20"
-    BackgroundColor="default"
   >
-    <Flex asElement="section" BackgroundColor="destructive">
+    <Flex asElement="section" BackgroundColor="default">
       <Typography asElement="h1">hello</Typography>
     </Flex>
-    <Grid asElement="div" columns="5" border>
+    <Grid BackgroundColor="background" asElement="div" columns="5" border>
       <GridItem>
-        <Button>hello</Button>
+        <Button variant={"ghost"}>hello</Button>
       </GridItem>
       <GridItem>
         <ThemeBtn />

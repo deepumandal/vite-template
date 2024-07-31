@@ -12,7 +12,7 @@ import { type AsElementType, type ElementTypeMap } from "./asElement";
 interface P<T extends keyof ElementTypeMap> {
   children: ReactNode;
   className?: ClassType;
-  asElement: AsElementType<T>;
+  asElement?: AsElementType<T>;
   id?: string;
   ariaLabel?: string;
   ariaDescribedBy?: string;

@@ -1,10 +1,9 @@
 import { forwardRef } from "react";
 import { AnyType } from "@AppTypes/commonTypes";
 import { CommonProps } from "@Components/config";
-import { cn, type ClassType } from "@Utils/className";
-import { color } from "../Common/colors-blocks";
+import { cn } from "@Utils/className";
 
-type ContainerProps = CommonProps<"container"> & {
+type ContainerProps = Omit<CommonProps<"container">, "BackgroundColor"> & {
   ScreenType: "container" | "full-screen";
   fullHeight?: boolean;
 };
@@ -13,13 +12,12 @@ const Container = forwardRef<AnyType, ContainerProps>(
   (
     {
       children,
-      asElement: Element,
+      asElement: Element = "main",
       className,
       role,
       ScreenType = "container",
       border,
       fullHeight,
-      BackgroundColor = "default",
       ...rest
     }: ContainerProps,
     ref
@@ -32,7 +30,6 @@ const Container = forwardRef<AnyType, ContainerProps>(
         border && "border border-red",
         "bg-background",
         fullHeight ? "h-full min-h-screen" : "",
-        color[BackgroundColor] as ClassType,
         className
       )}
       role={role}
