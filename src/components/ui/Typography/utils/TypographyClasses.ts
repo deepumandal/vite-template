@@ -1,19 +1,23 @@
-import { HeadingColorType, TextColorType } from "@Components/config";
+import { ColorVariantsType, asTypographyType } from "@Components/config";
 import { ClassType } from "@Utils/className";
 
-type TypographyClassType = {
-  [key: string]: ClassType;
+type asElementObjectType = {
+  // eslint-disable-next-line no-unused-vars
+  [key in asTypographyType]: ClassType;
 };
-const TypographyClass: TypographyClassType = {
+const asElementObject: asElementObjectType = {
   h1: "text-4xl font-extrabold leading-tight tracking-tight",
   h2: "text-3xl font-bold leading-snug tracking-tight",
   h3: "text-2xl font-semibold leading-normal tracking-tight",
   h4: "text-xl font-medium leading-normal tracking-tight",
   h5: "text-lg font-medium leading-snug tracking-tight",
   h6: "text-base font-medium leading-snug tracking-tight",
+  p: "text-base font-normal leading-normal tracking-normal",
+  span: "text-base font-normal leading-normal tracking-normal",
+  strong: "text-base font-semibold leading-normal tracking-normal",
 } as const;
 
-const HeadingVariants: Record<HeadingColorType, ClassType> = {
+const HeadingVariants: Record<ColorVariantsType, ClassType> = {
   default: "text-heading",
   accent: "text-accent",
   destructive: "text-destructive",
@@ -22,7 +26,7 @@ const HeadingVariants: Record<HeadingColorType, ClassType> = {
   secondary: "text-secondary",
 } as const;
 
-const TextVariants: Record<TextColorType, ClassType> = {
+const TextVariants: Record<ColorVariantsType, ClassType> = {
   default: "text-text",
   accent: "text-accent",
   destructive: "text-destructive",
@@ -32,8 +36,8 @@ const TextVariants: Record<TextColorType, ClassType> = {
 } as const;
 
 export {
-  type TypographyClassType,
-  TypographyClass,
+  type asElementObjectType,
+  asElementObject,
   HeadingVariants,
   TextVariants,
 };

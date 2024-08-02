@@ -5,3 +5,4 @@ export { Grid, GridItem } from "./Grid";
 export { Typography } from "./Typography";
 export { Model } from "./Model";
 export { Button } from "./Button";
+export { Accordion } from "./Accordion";

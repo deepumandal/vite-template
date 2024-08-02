@@ -57,6 +57,7 @@ const Flex = forwardRef<AnyType, FlexProps>(
         directionObj[flexDirection],
         alignItemsObj[alignItems],
         alignContentObj[alignContent],
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
         color[BackgroundColor] as ClassType,
 
         className
