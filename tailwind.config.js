@@ -24,36 +24,61 @@ export default {
       },
       colors: {
         "border-red": "red",
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
-        background: "var(--background)",
+        border: {
+          DEFAULT: "hsl(var(--border))",
+          light: "hsl(var(--border-light))",
+          dark: "hsl(var(--border-dark))",
+        },
+        input: {
+          DEFAULT: "hsl(var(--input))",
+          light: "hsl(var(--input-light))",
+          dark: "hsl(var(--input-dark))",
+        },
+        ring: {
+          DEFAULT: "hsl(var(--ring))",
+          light: "hsl(var(--ring-light))",
+          dark: "hsl(var(--ring-dark))",
+        },
+        background: {
+          DEFAULT: "hsl(var(--background))",
+          light: "hsl(var(--background-light))",
+          dark: "hsl(var(--background-dark))",
+        },
         heading: {
-          DEFAULT: "var(--heading)",
+          DEFAULT: "hsl(var(--heading), <alpha-value>)",
+          light: "hsl(var(--heading-light), <alpha-value>)",
+          dark: "hsl(var(--heading-dark), <alpha-value>)",
         },
         text: {
-          DEFAULT: "var(--text)",
+          DEFAULT: "hsl(var(--text), <alpha-value> )",
+          light: "hsl(var(--text-light), <alpha-value> )",
+          dark: "hsl(var(--text-dark), <alpha-value> )",
         },
         accent: {
-          DEFAULT: "var(--accent)",
+          DEFAULT: "hsl(var(--accent), <alpha-value> )",
+          light: "hsl(var(--accent-light), <alpha-value> )",
+          dark: "hsl(var(--accent-dark), <alpha-value> )",
         },
         primary: {
-          DEFAULT: "var(--primary)",
+          DEFAULT: "hsl(var(--primary), <alpha-value> )",
+          light: "hsl(var(--primary-light), <alpha-value> )",
+          dark: "hsl(var(--primary-dark), <alpha-value> )",
         },
         secondary: {
-          DEFAULT: "var(--secondary)",
+          DEFAULT: "hsl(var(--secondary), <alpha-value> )",
+          light: "hsl(var(--secondary-light), <alpha-value> )",
+          dark: "hsl(var(--secondary-dark), <alpha-value> )",
         },
         destructive: {
-          DEFAULT: "var(--destructive)",
+          DEFAULT: "hsl(var(--destructive), <alpha-value> )",
+          light: "hsl(var(--destructive-light), <alpha-value> )",
+          dark: "hsl(var(--destructive-dark), <alpha-value> )",
         },
         muted: {
-          DEFAULT: "var(--muted)",
+          DEFAULT: "hsl(var(--muted), <alpha-value> )",
+          light: "hsl(var(--muted-light), <alpha-value> )",
+          dark: "hsl(var(--muted-dark), <alpha-value> )",
         },
-      },
-      borderRadius: {
-        lg: `var(--radius)`,
-        md: `calc(var(--radius) - 2px)`,
-        sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],

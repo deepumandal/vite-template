@@ -1,4 +1,4 @@
-@import "assets/styles/index.css"; /*  will look here latter */
+@import "assets/styles/index.css"; /*  will look here later */
 
 @tailwind base;
 @tailwind components;
@@ -6,32 +6,59 @@
 
 @layer base {
   :root {
-    --background: theme(colors.sky.100);
-    --heading: theme(colors.gray.100);
-    --text: theme(colors.gray.900);
-    --accent: theme(colors.red.900);
-    --muted: theme(colors.slate.600);
-    --primary: theme(colors.blue.900);
-    --secondary: theme(colors.slate.100);
-    --destructive: theme(colors.rose.900);
-    /* 
-    * - notification colors  
-    * - input box colors
-    * - border 
-    */
+    /* Light theme colors */
+    --background-light: 204, 93.8%, 93.7%;
+    --heading-light: 220.9, 39.3%, 11%;
+    --text-light: 220.9, 39.3%, 11%;
+    --accent-light: 0, 62.8%, 30.6%;
+    --muted-light: 215.3, 19.3%, 34.5%;
+    --primary-light: 213.1, 93.9%, 67.8%;
+    --secondary-light: 240, 13%, 91%;
+    --destructive-light: 0, 84.2%, 60.2%;
+    --input-light: 216, 12.2%, 83.9%;
+
+    /* Dark theme colors */
+    --background-dark: 222.2, 84%, 4.9%;
+    --heading-dark: 210, 20%, 98%;
+    --text-dark: 220, 14.3%, 95.9%;
+    --accent-dark: 0, 84.2%, 60.2%;
+    --muted-dark: 215.3, 25%, 26.7%;
+    --primary-dark: 213.1, 93.9%, 67.8%;
+    --secondary-dark: 215, 13.8%, 34.1%;
+    --destructive-dark: 346.8, 77.2%, 49.8%;
+    --input-dark: 215.3, 25%, 26.7%;
+
+    /* Default to light theme values */
+    --background: var(--background-light);
+    --heading: var(--heading-light);
+    --text: var(--text-light);
+    --accent: var(--accent-light);
+    --muted: var(--muted-light);
+    --primary: var(--primary-light);
+    --secondary: var(--secondary-light);
+    --destructive: var(--destructive-light);
+    --input: var(--input-light);
   }
 
+  /* Dark theme overrides */
   .dark {
-    --background: theme(colors.slate.950);
-    --heading: theme(colors.gray.50);
-    --text: theme(colors.gray.100);
-    --accent: theme(colors.red.500);
-    --muted: theme(colors.slate.700);
-    --primary: theme(colors.blue.400);
-    --secondary: theme(colors.slate.900);
-    --destructive: theme(colors.rose.500);
+    --background: var(--background-dark);
+    --heading: var(--heading-dark);
+    --text: var(--text-dark);
+    --accent: var(--accent-dark);
+    --muted: var(--muted-dark);
+    --primary: var(--primary-dark);
+    --secondary: var(--secondary-dark);
+    --destructive: var(--destructive-dark);
+    --input: var(--input-dark);
   }
 }
+
+/* 
+* - notification colors  
+* - input box colors
+* - border 
+*/
 
 @layer base {
   body {

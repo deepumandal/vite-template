@@ -1,19 +1,12 @@
-/* eslint-disable @typescript-eslint/no-unsafe-argument */
-/* eslint-disable @typescript-eslint/no-duplicate-type-constituents */
-/* eslint-disable @typescript-eslint/no-unnecessary-type-assertion */
-import {
-  CommonProps,
-  HeadingColorType,
-  TextColorType,
-} from "@Components/config";
-import { type ClassType, cn } from "@Utils/className";
+import { ColorVariantsType, CommonProps } from "@Components/config";
+import { cn } from "@Utils/className";
 import {
   HeadingVariants,
   TextVariants,
-  TypographyClass,
+  asElementObject,
 } from "./utils/TypographyClasses";
 
-type variantsType = HeadingColorType | TextColorType;
+type variantsType = ColorVariantsType;
 
 type TypographyProps = Omit<CommonProps<"Typography">, "BackgroundColor"> & {
   variants?: variantsType;
@@ -43,7 +36,7 @@ const Typography = ({
     role={role}
     className={cn(
       "flex",
-      TypographyClass[Element] as ClassType,
+      asElementObject[Element],
       border && "border border-red",
       isHeading(Element) ? HeadingVariants[variants] : TextVariants[variants],
       className

@@ -5,7 +5,7 @@
  */
 
 import { AriaRole, HtmlHTMLAttributes, ReactNode } from "react";
-import { type BackgroundColorType } from "@Components/config";
+import { type ColorVariantsType } from "@Components/config";
 import { ClassType } from "@Utils/className";
 import { type AsElementType, type ElementTypeMap } from "./asElement";
 
@@ -19,7 +19,7 @@ interface P<T extends keyof ElementTypeMap> {
   ariaLive?: "off" | "polite" | "assertive";
   role?: AriaRole;
   border?: boolean;
-  BackgroundColor?: BackgroundColorType;
+  BackgroundColor?: ColorVariantsType;
 }
 
 type CommonProps<T extends keyof ElementTypeMap> = P<T>;
