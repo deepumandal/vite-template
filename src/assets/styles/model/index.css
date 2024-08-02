@@ -1,7 +1,9 @@
 @layer utilities {
   .model-overlay {
-    /* @apply bg-model-overlay; */
+    @apply bg-model-overlay;
     position: fixed;
+    width: 100vw;
+    height: 100vh;
     inset: 0;
     animation: overlayShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
   }

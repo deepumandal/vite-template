@@ -16,6 +16,7 @@
     --secondary-light: 240, 13%, 91%;
     --destructive-light: 0, 84.2%, 60.2%;
     --input-light: 216, 12.2%, 83.9%;
+    --model-overlay-light: 0, 0%, 0%, 0.5;
 
     /* Dark theme colors */
     --background-dark: 222.2, 84%, 4.9%;
@@ -27,6 +28,7 @@
     --secondary-dark: 215, 13.8%, 34.1%;
     --destructive-dark: 346.8, 77.2%, 49.8%;
     --input-dark: 215.3, 25%, 26.7%;
+    --model-overlay-dark: 0, 0%, 0%, 0.5;
 
     /* Default to light theme values */
     --background: var(--background-light);

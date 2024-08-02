@@ -21,6 +21,35 @@ const App = () => (
         </Button>
         <Button variant="secondary">secondary</Button>
       </Flex>
+      <Flex className="w-full p-5" justifyContent="center">
+        open model
+        {/* <Model>
+          <Model.Trigger>Show Model</Model.Trigger>
+          <Model.Portal>
+            <Model.Content>
+              <Model.Heading> hello </Model.Heading>
+              <Model.Description>hello Description</Model.Description>
+            </Model.Content>
+          </Model.Portal>
+        </Model> */}
+        {/* 
+        
+        update this model as shorter as possible easy to implement and it is 
+        hard to remember that which after which children has to to be there 
+        thus make a structure something like 
+
+        model
+            trigger - trigger
+            portal 
+              Header
+              body
+              footer 
+            portal
+        model 
+
+        above way is far more easy to remember and use 
+        */}
+      </Flex>
     </Flex>
   </Container>
 );

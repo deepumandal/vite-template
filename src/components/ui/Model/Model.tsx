@@ -26,7 +26,12 @@ Trigger.displayName = "Trigger";
 const Portal = forwardRef<HTMLDivElement, ModelPortal>(
   ({ children, ...rest }: ModelPortal, OverlayRef) => (
     <RadixDialog.Portal {...rest}>
-      <RadixDialog.Overlay ref={OverlayRef} className="model-overlay" />
+      <RadixDialog.Overlay
+        ref={OverlayRef}
+        className="model-overlay"
+        id="model-overlay
+      "
+      />
       {children}
     </RadixDialog.Portal>
   )
