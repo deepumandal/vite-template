@@ -79,6 +79,11 @@ export default {
           light: "hsl(var(--muted-light), <alpha-value> )",
           dark: "hsl(var(--muted-dark), <alpha-value> )",
         },
+        "model-overlay": {
+          DEFAULT: "hsl(var(--model-overlay), <alpha-value> )",
+          light: "hsl(var(--model-overlay-light), <alpha-value> )",
+          dark: "hsl(var(--model-overlay-dark), <alpha-value> )",
+        },
       },
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],

@@ -1,5 +1,5 @@
 import { useTheme } from "@Components/hooks";
-import { Container, Button, Flex } from "@Components/ui";
+import { Container, Button, Flex, Model } from "@Components/ui";
 
 const App = () => (
   <Container
@@ -21,6 +21,27 @@ const App = () => (
         </Button>
         <Button variant="secondary">secondary</Button>
       </Flex>
+      <Flex className="w-full p-5" justifyContent="center">
+        <Model>
+          <Model.Trigger asChild>
+            <Button variant="outline" className="">
+              Show Model
+            </Button>
+          </Model.Trigger>
+          <Model.Content BackgroundColor="default">
+            <Model.Header>
+              <Model.Title>Title</Model.Title>
+              <Model.Description>Description</Model.Description>
+            </Model.Header>
+
+            <Model.Footer className="gap-2">
+              <Model.Close>
+                <Button variant="destructive">Continue</Button>
+              </Model.Close>
+            </Model.Footer>
+          </Model.Content>
+        </Model>
+      </Flex>
     </Flex>
   </Container>
 );
@@ -31,7 +52,7 @@ const ThemeBtn = () => {
   return (
     <Flex asElement="div" className="space-x-3 opa">
       <Button
-        variant="destructive"
+        variant="outline"
         onClick={() => {
           setTheme("dark");
         }}
@@ -39,6 +60,7 @@ const ThemeBtn = () => {
         dark
       </Button>
       <Button
+        variant="outline"
         onClick={() => {
           setTheme("light");
         }}
@@ -46,6 +68,7 @@ const ThemeBtn = () => {
         light
       </Button>
       <Button
+        variant="outline"
         onClick={() => {
           setTheme("system");
         }}
