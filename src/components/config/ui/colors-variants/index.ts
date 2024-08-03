@@ -4,6 +4,7 @@ type ColorVariantsType =
   | "secondary"
   | "muted"
   | "accent"
-  | "destructive";
+  | "destructive"
+  | "background";
 
 export { type ColorVariantsType };

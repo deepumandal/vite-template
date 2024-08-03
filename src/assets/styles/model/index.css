@@ -1,6 +1,6 @@
 @layer utilities {
   .model-overlay {
-    @apply bg-model-overlay;
+    @apply bg-model-overlay/75;
     position: fixed;
     width: 100vw;
     height: 100vh;
@@ -9,7 +9,6 @@
   }
 
   .model-content {
-    background-color: white;
     border-radius: 6px;
     box-shadow:
       hsl(206 22% 7% / 35%) 0px 10px 38px -10px,

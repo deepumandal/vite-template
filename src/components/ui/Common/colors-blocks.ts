@@ -1,6 +1,6 @@
-import { type BackgroundType } from "@Components/config";
+import { type ColorVariantsType } from "@Components/config";
 
-export const color: Record<BackgroundType, string> = {
+export const color: Record<ColorVariantsType, string> = {
   default: "bg-transparent",
   accent: "bg-accent",
   background: "bg-background",

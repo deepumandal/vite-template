@@ -1,5 +1,5 @@
 import { useTheme } from "@Components/hooks";
-import { Container, Button, Flex } from "@Components/ui";
+import { Container, Button, Flex, Model } from "@Components/ui";
 
 const App = () => (
   <Container
@@ -22,33 +22,24 @@ const App = () => (
         <Button variant="secondary">secondary</Button>
       </Flex>
       <Flex className="w-full p-5" justifyContent="center">
-        open model
-        {/* <Model>
-          <Model.Trigger>Show Model</Model.Trigger>
-          <Model.Portal>
-            <Model.Content>
-              <Model.Heading> hello </Model.Heading>
-              <Model.Description>hello Description</Model.Description>
-            </Model.Content>
-          </Model.Portal>
-        </Model> */}
-        {/* 
-        
-        update this model as shorter as possible easy to implement and it is 
-        hard to remember that which after which children has to to be there 
-        thus make a structure something like 
+        <Model>
+          <Model.Trigger asChild>
+            <Button variant="outline" className="">
+              Show Model
+            </Button>
+          </Model.Trigger>
+          <Model.Content BackgroundColor="default">
+            <Model.Header>
+              <Model.Title>Title</Model.Title>
+              <Model.Description>Description</Model.Description>
+            </Model.Header>
 
-        model
-            trigger - trigger
-            portal 
-              Header
-              body
-              footer 
-            portal
-        model 
-
-        above way is far more easy to remember and use 
-        */}
+            <Model.Footer>
+              <Model.Title>Title</Model.Title>
+              <Model.Description>Description</Model.Description>
+            </Model.Footer>
+          </Model.Content>
+        </Model>
       </Flex>
     </Flex>
   </Container>
