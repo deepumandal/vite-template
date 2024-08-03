@@ -34,9 +34,10 @@ const App = () => (
               <Model.Description>Description</Model.Description>
             </Model.Header>
 
-            <Model.Footer>
-              <Model.Title>Title</Model.Title>
-              <Model.Description>Description</Model.Description>
+            <Model.Footer className="gap-2">
+              <Model.Close>
+                <Button variant="destructive">Continue</Button>
+              </Model.Close>
             </Model.Footer>
           </Model.Content>
         </Model>
@@ -51,7 +52,7 @@ const ThemeBtn = () => {
   return (
     <Flex asElement="div" className="space-x-3 opa">
       <Button
-        variant="destructive"
+        variant="outline"
         onClick={() => {
           setTheme("dark");
         }}
@@ -59,6 +60,7 @@ const ThemeBtn = () => {
         dark
       </Button>
       <Button
+        variant="outline"
         onClick={() => {
           setTheme("light");
         }}
@@ -66,6 +68,7 @@ const ThemeBtn = () => {
         light
       </Button>
       <Button
+        variant="outline"
         onClick={() => {
           setTheme("system");
         }}
