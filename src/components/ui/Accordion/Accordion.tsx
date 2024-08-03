@@ -10,8 +10,10 @@ interface AccordionSingleProps
 
 type AccordionProps = AccordionMultipleProps | AccordionSingleProps;
 
-const Accordion = ({ children, ...rest }: AccordionProps) => (
-  <AccordionPrimitive.Root {...rest}>{children}</AccordionPrimitive.Root>
+const Accordion = ({ children, className, ...rest }: AccordionProps) => (
+  <AccordionPrimitive.Root {...rest} className={cn("w-full", className)}>
+    {children}
+  </AccordionPrimitive.Root>
 );
 
 const AccordionItem = forwardRef<
@@ -34,7 +36,7 @@ const AccordionTrigger = forwardRef<
     <AccordionPrimitive.Trigger
       ref={ref}
       className={cn(
-        "flex flex-1 items-center justify-between py-4 font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-180",
+        "flex flex-1 text-heading items-center justify-between py-4 font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-180",
         className
       )}
       {...props}
@@ -52,7 +54,7 @@ const AccordionContent = forwardRef<
 >(({ className, children, ...props }, ref) => (
   <AccordionPrimitive.Content
     ref={ref}
-    className="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
+    className="overflow-hidden text-text text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
     {...props}
   >
     <div className={cn("pb-4 pt-0", className)}>{children}</div>
@@ -61,7 +63,7 @@ const AccordionContent = forwardRef<
 
 AccordionContent.displayName = AccordionPrimitive.Content.displayName;
 
-Accordion.AccordionItem = AccordionItem;
-Accordion.AccordionTrigger = AccordionTrigger;
-Accordion.AccordionContent = AccordionContent;
+Accordion.Item = AccordionItem;
+Accordion.Trigger = AccordionTrigger;
+Accordion.Content = AccordionContent;
 export { Accordion, type AccordionProps };
