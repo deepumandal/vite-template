@@ -1,5 +1,5 @@
 import { useTheme } from "@Components/hooks";
-import { Container, Button, Flex, Model } from "@Components/ui";
+import { Container, Button, Flex, Model, Accordion } from "@Components/ui";
 
 const App = () => (
   <Container
@@ -7,7 +7,7 @@ const App = () => (
     ScreenType="container"
     fullHeight
     border
-    className="p-20 flex justify-center"
+    className="p-20 flex items-center flex-col"
   >
     <Flex flexDirection="column" className="gap-10" alignItems="center">
       <ThemeBtn />
@@ -42,6 +42,39 @@ const App = () => (
           </Model.Content>
         </Model>
       </Flex>
+    </Flex>
+
+    <Flex asElement="section" className="w-96">
+      <Accordion type="single">
+        <Accordion.Item value="item">
+          <Accordion.Trigger>Item 1</Accordion.Trigger>
+          <Accordion.Content>Content 1</Accordion.Content>
+        </Accordion.Item>
+        <Accordion.Item value="item2">
+          <Accordion.Trigger>Item 1</Accordion.Trigger>
+          <Accordion.Content>Content 1</Accordion.Content>
+        </Accordion.Item>
+        <Accordion.Item value="item3">
+          <Accordion.Trigger>Item 1</Accordion.Trigger>
+          <Accordion.Content>Content 1</Accordion.Content>
+        </Accordion.Item>
+        <Accordion.Item value="item4">
+          <Accordion.Trigger>Item 1</Accordion.Trigger>
+          <Accordion.Content>Content 1</Accordion.Content>
+        </Accordion.Item>
+        <Accordion.Item value="item5">
+          <Accordion.Trigger>Item 1</Accordion.Trigger>
+          <Accordion.Content>Content 1</Accordion.Content>
+        </Accordion.Item>
+        <Accordion.Item value="item6">
+          <Accordion.Trigger>Item 1</Accordion.Trigger>
+          <Accordion.Content>Content 1</Accordion.Content>
+        </Accordion.Item>
+        <Accordion.Item value="item7">
+          <Accordion.Trigger>Item 1</Accordion.Trigger>
+          <Accordion.Content>Content 1</Accordion.Content>
+        </Accordion.Item>
+      </Accordion>
     </Flex>
   </Container>
 );
