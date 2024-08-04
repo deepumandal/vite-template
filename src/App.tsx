@@ -11,6 +11,7 @@ import {
   Avatar,
   Badge,
   Breadcrumb,
+  Checkbox,
 } from "@Components/ui";
 
 const App = () => (
@@ -137,6 +138,9 @@ const App = () => (
           </Breadcrumb.Item>
         </Breadcrumb.List>
       </Breadcrumb>
+    </Flex>
+    <Flex asElement="section">
+      <Checkbox />
     </Flex>
   </Container>
 );
