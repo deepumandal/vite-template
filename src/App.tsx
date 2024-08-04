@@ -1,7 +1,14 @@
 import { useState } from "react";
 import { useTheme } from "@Components/hooks";
-import { Container, Button, Flex, Model, Accordion } from "@Components/ui";
-import ConfirmationDialog from "@Components/ui/ConfirmationDialog/ConfirmationDialog";
+import {
+  Container,
+  Button,
+  Flex,
+  Model,
+  Accordion,
+  ConfirmationDialog,
+  Avatar,
+} from "@Components/ui";
 
 const App = () => (
   <Container
@@ -67,6 +74,27 @@ const App = () => (
       </Accordion>
     </Flex>
     <AreYouSure />
+    <Flex asElement="section" className="space-x-4">
+      <Avatar>
+        <Avatar.Image
+          className="transition-all duration-300 hover:scale-110 hover:rotate-6 cursor-pointer"
+          src="https://i.pravatar.cc/150?img=68"
+        />
+        <Avatar.Fallback className="bg-red">JD</Avatar.Fallback>
+      </Avatar>
+      <Avatar>
+        <Avatar.Image src="https://i.pravatar.cc/150?img=68" />
+        <Avatar.Fallback>D</Avatar.Fallback>
+      </Avatar>
+      <Avatar>
+        <Avatar.Image src="https://i.pravatar.cc/150?img=68" />
+        <Avatar.Fallback>E</Avatar.Fallback>
+      </Avatar>
+      <Avatar>
+        <Avatar.Image src="https://i.pravatar.cc/150?img=68" />
+        <Avatar.Fallback>JD</Avatar.Fallback>
+      </Avatar>
+    </Flex>
   </Container>
 );
 

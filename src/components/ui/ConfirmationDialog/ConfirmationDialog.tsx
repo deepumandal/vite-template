@@ -59,4 +59,4 @@ const ConfirmationDialog = ({
     </Model.Content>
   </Model>
 );
-export default ConfirmationDialog;
+export { ConfirmationDialog };
