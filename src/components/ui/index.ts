@@ -11,3 +11,4 @@ export { Avatar } from "./Avatar";
 export { Badge } from "./Badge";
 export { Breadcrumb } from "./Breadcrumb";
 export { Checkbox } from "./CheckBox";
+export { ContextMenu } from "./ContextMenu";

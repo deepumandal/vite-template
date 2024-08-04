@@ -12,6 +12,8 @@ import {
   Badge,
   Breadcrumb,
   Checkbox,
+  Typography,
+  ContextMenu,
 } from "@Components/ui";
 
 const App = () => (
@@ -142,6 +144,32 @@ const App = () => (
     <Flex asElement="section">
       <Checkbox />
     </Flex>
+    <ContextMenu>
+      <ContextMenu.Trigger asChild>
+        <Flex
+          asElement="div"
+          justifyContent="center"
+          alignItems="center"
+          className="w-96 aspect-video my-10"
+          border
+        >
+          <Typography className="w-fit">Right click here</Typography>
+        </Flex>
+      </ContextMenu.Trigger>
+      <ContextMenu.Content>
+        <ContextMenu.Item>hello</ContextMenu.Item>
+        <ContextMenu.Item>hello</ContextMenu.Item>
+        <ContextMenu.Sub>
+          <ContextMenu.SubTrigger>hello right arrow</ContextMenu.SubTrigger>
+          <ContextMenu.SubContent>
+            <ContextMenu.Item>hello</ContextMenu.Item>
+            <ContextMenu.Item>hello</ContextMenu.Item>
+          </ContextMenu.SubContent>
+        </ContextMenu.Sub>
+        <ContextMenu.Item>hello</ContextMenu.Item>
+        <ContextMenu.Item>hello</ContextMenu.Item>
+      </ContextMenu.Content>
+    </ContextMenu>
   </Container>
 );
 
