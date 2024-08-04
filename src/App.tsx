@@ -14,6 +14,7 @@ import {
   Checkbox,
   Typography,
   ContextMenu,
+  Tooltip,
 } from "@Components/ui";
 
 const App = () => (
@@ -170,6 +171,17 @@ const App = () => (
         <ContextMenu.Item>hello</ContextMenu.Item>
       </ContextMenu.Content>
     </ContextMenu>
+
+    <Flex asElement="section" className="w-full">
+      <Tooltip.Provider>
+        <Tooltip>
+          <Tooltip.Trigger asChild>
+            <Button variant="outline">Hover me</Button>
+          </Tooltip.Trigger>
+          <Tooltip.Content>Tooltip content</Tooltip.Content>
+        </Tooltip>
+      </Tooltip.Provider>
+    </Flex>
   </Container>
 );
 
