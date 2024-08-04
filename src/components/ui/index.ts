@@ -1,11 +1,3 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
-/* eslint-disable @typescript-eslint/no-unused-vars */
-function endsWith(x: string, y: string) {
-  const index = x.lastIndexOf(y);
-  return x.lastIndexOf(y) === x.length - y.length;
-}
-
 export { Block } from "./Block";
 export { Container } from "./Container";
 export { Flex } from "./Flex";
