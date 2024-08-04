@@ -17,6 +17,8 @@ import {
   Tooltip,
   HoverCard,
   Skeleton,
+  Separator,
+  Block,
 } from "@Components/ui";
 
 const App = () => (
@@ -195,6 +197,33 @@ const App = () => (
         <Skeleton className="h-4 w-[250px]" />
         <Skeleton className="h-4 w-[200px]" />
       </div>
+    </Flex>
+
+    <Flex asElement="section" className="mt-10">
+      <Block>
+        <Block className="space-y-1">
+          <Typography
+            asElement="h4"
+            className="text-sm font-medium leading-none"
+          >
+            Radix Primitives
+          </Typography>
+          <Typography asElement="p" className="text-sm text-muted">
+            An open-source UI component library.
+          </Typography>
+        </Block>
+        <Separator className="my-4" />
+        <Flex
+          asElement="div"
+          className="flex h-5 items-center space-x-4 text-sm"
+        >
+          <Typography asElement="span">Blog</Typography>
+          <Separator orientation="vertical" />
+          <Typography asElement="span">Docs</Typography>
+          <Separator orientation="vertical" />
+          <Typography asElement="span">Source</Typography>
+        </Flex>
+      </Block>
     </Flex>
   </Container>
 );

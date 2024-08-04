@@ -15,3 +15,4 @@ export { ContextMenu } from "./ContextMenu";
 export { Tooltip } from "./ToolTip";
 export { HoverCard } from "./HoverCard";
 export { Skeleton } from "./Skeleton";
+export { Separator } from "./Separator";

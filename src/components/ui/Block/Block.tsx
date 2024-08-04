@@ -28,7 +28,7 @@ const Block = forwardRef<AnyType, BlockProps>(
       aria-describedby={ariaDescribedBy}
       aria-live={ariaLive}
       role={role}
-      className={cn("p-4", border && "border border-border-red", className)}
+      className={cn(border && "border border-border-red", className)}
       {...rest}
     >
       {children}
