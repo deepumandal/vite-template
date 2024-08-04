@@ -8,6 +8,7 @@ import {
   Accordion,
   ConfirmationDialog,
   Avatar,
+  Badge,
 } from "@Components/ui";
 
 const App = () => (
@@ -94,6 +95,12 @@ const App = () => (
         <Avatar.Image src="https://i.pravatar.cc/150?img=68" />
         <Avatar.Fallback>JD</Avatar.Fallback>
       </Avatar>
+    </Flex>
+    <Flex asElement="section" className="my-5 space-x-5">
+      <Badge variant="default">Javascript</Badge>
+      <Badge variant="destructive">Typescript</Badge>
+      <Badge variant="outline">Java</Badge>
+      <Badge variant="secondary">Python</Badge>
     </Flex>
   </Container>
 );
