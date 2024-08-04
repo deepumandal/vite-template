@@ -13,3 +13,4 @@ export { Breadcrumb } from "./Breadcrumb";
 export { Checkbox } from "./CheckBox";
 export { ContextMenu } from "./ContextMenu";
 export { Tooltip } from "./ToolTip";
+export { HoverCard } from "./HoverCard";
