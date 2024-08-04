@@ -1,3 +1,4 @@
+import { Slash } from "lucide-react";
 import { useState } from "react";
 import { useTheme } from "@Components/hooks";
 import {
@@ -9,6 +10,7 @@ import {
   ConfirmationDialog,
   Avatar,
   Badge,
+  Breadcrumb,
 } from "@Components/ui";
 
 const App = () => (
@@ -101,6 +103,40 @@ const App = () => (
       <Badge variant="destructive">Typescript</Badge>
       <Badge variant="outline">Java</Badge>
       <Badge variant="secondary">Python</Badge>
+    </Flex>
+
+    <Flex asElement="section" className="mt-5">
+      <Breadcrumb>
+        <Breadcrumb.List>
+          <Breadcrumb.Item>
+            <Breadcrumb.Link>hello</Breadcrumb.Link>
+          </Breadcrumb.Item>
+          <Breadcrumb.Separator>
+            <Slash />
+          </Breadcrumb.Separator>
+          <Breadcrumb.Item>
+            <Breadcrumb.Link>hello</Breadcrumb.Link>
+          </Breadcrumb.Item>
+          <Breadcrumb.Separator>
+            <Slash />
+          </Breadcrumb.Separator>
+          <Breadcrumb.Item>
+            <Breadcrumb.Link>hello</Breadcrumb.Link>
+          </Breadcrumb.Item>
+          <Breadcrumb.Separator>
+            <Slash />
+          </Breadcrumb.Separator>
+          <Breadcrumb.Item>
+            <Breadcrumb.Link>hello</Breadcrumb.Link>
+          </Breadcrumb.Item>
+          <Breadcrumb.Separator>
+            <Slash />
+          </Breadcrumb.Separator>
+          <Breadcrumb.Item>
+            <Breadcrumb.Link>hello</Breadcrumb.Link>
+          </Breadcrumb.Item>
+        </Breadcrumb.List>
+      </Breadcrumb>
     </Flex>
   </Container>
 );
