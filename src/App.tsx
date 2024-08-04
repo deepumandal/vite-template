@@ -1,5 +1,7 @@
+import { useState } from "react";
 import { useTheme } from "@Components/hooks";
 import { Container, Button, Flex, Model, Accordion } from "@Components/ui";
+import ConfirmationDialog from "@Components/ui/ConfirmationDialog/ConfirmationDialog";
 
 const App = () => (
   <Container
@@ -24,9 +26,7 @@ const App = () => (
       <Flex className="w-full p-5" justifyContent="center">
         <Model>
           <Model.Trigger asChild>
-            <Button variant="outline" className="">
-              Show Model
-            </Button>
+            <Button variant="outline">Show Model</Button>
           </Model.Trigger>
           <Model.Content BackgroundColor="default">
             <Model.Header>
@@ -35,7 +35,7 @@ const App = () => (
             </Model.Header>
 
             <Model.Footer className="gap-2">
-              <Model.Close>
+              <Model.Close asChild>
                 <Button variant="destructive">Continue</Button>
               </Model.Close>
             </Model.Footer>
@@ -46,38 +46,66 @@ const App = () => (
 
     <Flex asElement="section" className="w-96">
       <Accordion type="single">
-        <Accordion.Item value="item">
-          <Accordion.Trigger>Item 1</Accordion.Trigger>
-          <Accordion.Content>Content 1</Accordion.Content>
+        <Accordion.Item value="item1">
+          <Accordion.Trigger>Section 1</Accordion.Trigger>
+          <Accordion.Content>
+            This is the content for section 1.
+          </Accordion.Content>
         </Accordion.Item>
         <Accordion.Item value="item2">
-          <Accordion.Trigger>Item 1</Accordion.Trigger>
-          <Accordion.Content>Content 1</Accordion.Content>
+          <Accordion.Trigger>Section 2</Accordion.Trigger>
+          <Accordion.Content>
+            This is the content for section 2.
+          </Accordion.Content>
         </Accordion.Item>
         <Accordion.Item value="item3">
-          <Accordion.Trigger>Item 1</Accordion.Trigger>
-          <Accordion.Content>Content 1</Accordion.Content>
-        </Accordion.Item>
-        <Accordion.Item value="item4">
-          <Accordion.Trigger>Item 1</Accordion.Trigger>
-          <Accordion.Content>Content 1</Accordion.Content>
-        </Accordion.Item>
-        <Accordion.Item value="item5">
-          <Accordion.Trigger>Item 1</Accordion.Trigger>
-          <Accordion.Content>Content 1</Accordion.Content>
-        </Accordion.Item>
-        <Accordion.Item value="item6">
-          <Accordion.Trigger>Item 1</Accordion.Trigger>
-          <Accordion.Content>Content 1</Accordion.Content>
-        </Accordion.Item>
-        <Accordion.Item value="item7">
-          <Accordion.Trigger>Item 1</Accordion.Trigger>
-          <Accordion.Content>Content 1</Accordion.Content>
+          <Accordion.Trigger>Section 3</Accordion.Trigger>
+          <Accordion.Content>
+            This is the content for section 3.
+          </Accordion.Content>
         </Accordion.Item>
       </Accordion>
     </Flex>
+    <AreYouSure />
   </Container>
 );
+
+const AreYouSure = () => {
+  const [open, setOpen] = useState<boolean>(false);
+
+  const handleConfirm = () => {
+    alert("Confirmed");
+  };
+
+  const handleCancel = () => {
+    alert("Cancelled");
+  };
+
+  return (
+    <Flex asElement="section">
+      <Button
+        variant="outline"
+        className="m-10"
+        onClick={() => {
+          setOpen(true);
+        }}
+      >
+        Are you sure?
+      </Button>
+      <ConfirmationDialog
+        title="Are you sure?"
+        body="Are you sure you want to delete this item?"
+        model
+        open={open}
+        onOpenChange={() => {
+          setOpen(!open);
+        }}
+        handleConfirm={handleConfirm}
+        handleCancel={handleCancel}
+      />
+    </Flex>
+  );
+};
 
 const ThemeBtn = () => {
   const { setTheme } = useTheme();
