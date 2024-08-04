@@ -5,6 +5,7 @@ type asElementObjectType = {
   // eslint-disable-next-line no-unused-vars
   [key in asTypographyType]: ClassType;
 };
+
 const asElementObject: asElementObjectType = {
   h1: "text-4xl font-extrabold leading-tight tracking-tight",
   h2: "text-3xl font-bold leading-snug tracking-tight",
@@ -17,7 +18,9 @@ const asElementObject: asElementObjectType = {
   strong: "text-base font-semibold leading-normal tracking-normal",
 } as const;
 
-const HeadingVariants: Record<ColorVariantsType, ClassType> = {
+type Variants = Exclude<ColorVariantsType, "background">;
+
+const HeadingVariants: Record<Variants, ClassType> = {
   default: "text-heading",
   accent: "text-accent",
   destructive: "text-destructive",
@@ -26,7 +29,7 @@ const HeadingVariants: Record<ColorVariantsType, ClassType> = {
   secondary: "text-secondary",
 } as const;
 
-const TextVariants: Record<ColorVariantsType, ClassType> = {
+const TextVariants: Record<Variants, ClassType> = {
   default: "text-text",
   accent: "text-accent",
   destructive: "text-destructive",

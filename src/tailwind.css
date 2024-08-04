@@ -17,6 +17,7 @@
     --destructive-light: 0, 84.2%, 60.2%;
     --input-light: 216, 12.2%, 83.9%;
     --model-overlay-light: 0, 0%, 0%;
+    --border-light: 240, 5.9%, 90%;
 
     /* Dark theme colors */
     --background-dark: 222.2, 84%, 4.9%;
@@ -29,6 +30,7 @@
     --destructive-dark: 346.8, 77.2%, 49.8%;
     --input-dark: 215.3, 25%, 26.7%;
     --model-overlay-dark: 0, 0%, 0%;
+    --border-dark: 240, 3.7%, 15.9%;
 
     /* Default to light theme values */
     --background: var(--background-light);
@@ -41,6 +43,7 @@
     --destructive: var(--destructive-light);
     --input: var(--input-light);
     --model-overlay: var(--model-overlay-light);
+    --border: var(--border-light);
   }
 
   /* Dark theme overrides */
@@ -55,6 +58,7 @@
     --destructive: var(--destructive-dark);
     --input: var(--input-dark);
     --model-overlay: var(--model-overlay-dark);
+    --border: var(--border-dark);
   }
 }
 
