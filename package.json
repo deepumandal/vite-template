@@ -75,6 +75,10 @@
     "src/**/*.css": [
       "prettier --write",
       "pnpm spellcheck"
+    ],
+    "src/**/*.md": [
+      "prettier --write",
+      "pnpm spellcheck"
     ]
   },
   "engines": {
