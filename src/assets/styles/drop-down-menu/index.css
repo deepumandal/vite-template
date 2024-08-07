@@ -1,0 +1,54 @@
+/* Container for the dropdown */
+.dropdown-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* Button to toggle the dropdown */
+.dropdown-toggle {
+  background-color: #4caf50; /* Green background */
+  color: white; /* White text */
+  padding: 10px 20px; /* Padding */
+  font-size: 16px; /* Font size */
+  border: none; /* No border */
+  cursor: pointer; /* Pointer cursor on hover */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+/* Change background color on hover */
+.dropdown-toggle:hover {
+  background-color: #45a049;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+  display: block;
+  position: absolute;
+  background-color: #f9f9f9; /* Light grey background */
+  min-width: 160px; /* Minimum width */
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); /* Shadow */
+  z-index: 1; /* Ensure it is above other elements */
+  border-radius: 5px; /* Rounded corners */
+  margin-top: 5px; /* Space from the button */
+}
+
+/* Dropdown items */
+.dropdown-item {
+  color: black; /* Black text */
+  padding: 12px 16px; /* Padding */
+  text-decoration: none; /* No underline */
+  display: block; /* Block display */
+  transition: background-color 0.3s; /* Smooth transition */
+  border-bottom: 1px solid #ddd; /* Bottom border */
+}
+
+/* Change background color on hover */
+.dropdown-item:hover {
+  background-color: #f1f1f1;
+}
+
+/* Last item should not have a bottom border */
+.dropdown-item:last-child {
+  border-bottom: none;
+}

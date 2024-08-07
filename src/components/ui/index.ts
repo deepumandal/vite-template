@@ -16,3 +16,4 @@ export { Tooltip } from "./ToolTip";
 export { HoverCard } from "./HoverCard";
 export { Skeleton } from "./Skeleton";
 export { Separator } from "./Separator";
+export { DropdownMenu } from "./DropDownMenu";
