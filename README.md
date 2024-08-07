@@ -13,8 +13,8 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/React-2024-blue" alt="React Badge" />
-  <img src="https://img.shields.io/badge/Vite-Fast-yellow" alt="Vite Badge" />
+  <img src="https://img.shields.io/badge/React-18.3-blue" alt="React Badge" />
+  <img src="https://img.shields.io/badge/Vite-5.3+swc-yellow" alt="Vite Badge" />
   <img src="https://img.shields.io/badge/TypeScript-5.5-blue" alt="TypeScript Badge" />
   <img src="https://img.shields.io/badge/TailwindCSS-2.2-green" alt="TailwindCSS Badge" />
   <img src="https://img.shields.io/badge/Redux-4.1-purple" alt="Redux Badge" />
