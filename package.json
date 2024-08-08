@@ -76,7 +76,7 @@
       "prettier --write",
       "pnpm spellcheck"
     ],
-    "src/**/*.md": [
+    "./**/*.md": [
       "prettier --write",
       "pnpm spellcheck"
     ]
