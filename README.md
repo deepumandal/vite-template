@@ -13,8 +13,8 @@
 <a href="https://mermaid.live/"><b>Live Projects!</b></a>
 </p>
 <p align="center">
-<a href="https://https://github.com/deepumandal/vite-template/blob/master/README.md">📖 Documentation </a>|
-<a href="https://github.com/deepumandal/vite-template/blob/master/README.md#-introduction">🚀 Getting Started</a> |
+<a href="https://https://github.com/deepumandal/vite-template/blob/master/README.md">📖 Documentation </a> |
+<a href="https://github.com/deepumandal/vite-template?tab=readme-ov-file#get-started">🚀 Getting Started</a> |
 <a href="https://discord.gg/deepumandal" title="Discord invite">🙌 Join Us</a>
 </p>
 
@@ -84,86 +84,6 @@ This template is designed to supercharge your frontend development experience by
 
 <!--
 This project follows a structured approach to organize its files and folders. Below is an overview of the directory layout:
-
-#### 📁 Top-Level Files
-- 📄 **.github/**
-  - 📄 **workflows/codeql.yml**: Configuration for CodeQL analysis.
-- 📄 **.husky/**
-  - 📄 **pre-commit**: Script to run before commits.
-- 📄 **public/**
-  - 📄 **vite.svg**: SVG image used in the application.
-- 📄 **src/**
-  - 📁 **@types/**
-    - 📄 **commonTypes.ts**: Common type definitions for the project.
-  - 📁 **assets/**
-    - 📁 **fonts/**: Fonts used in the application.
-    - 📁 **svg/**: SVG images used in the application.
-      - 📄 **react.svg**: SVG image for React.
-  - 📁 **styles/**
-    - 📁 **Container/**
-      - 📄 **index.css**: Container styles.
-    - 📁 **model/**
-      - 📄 **index.css**: Model styles.
-    - 📄 **index.css**: Global styles.
-  - 📁 **components/**
-    - 📁 **HOC/**: Higher-Order Components.
-      - 📄 **index.ts**: Entry point for HOC components.
-    - 📁 **theme/**: Theming components.
-      - 📄 **index.ts**: Theme index.
-      - 📄 **theme-provider.tsx**: Theme provider component.
-    - 📁 **ui/**: Various UI components.
-      - 📄 **Accordion.tsx**: Accordion component.
-      - 📄 **Avatar.tsx**: Avatar component.
-      - 📄 **Badge.tsx**: Badge component.
-      - 📄 **Block.tsx**: Block component.
-      - 📄 **Breadcrumb.tsx**: Breadcrumb component.
-      - 📁 **Button/**
-        - 📄 **button.tsx**: Button component.
-        - 📄 **ButtonVariants.ts**: Button variants.
-      - 📄 **CheckBox.tsx**: CheckBox component.
-      - 📄 **ConfirmationDialog.tsx**: Confirmation dialog component.
-      - 📄 **Container.tsx**: Container component.
-      - 📄 **ContextMenu.tsx**: Context menu component.
-      - 📄 **Flex.tsx**: Flexbox layout component.
-      - 📁 **Grid/**
-        - 📄 **GridItem.tsx**: Grid item component.
-        - 📄 **Grid.tsx**: Grid container component.
-      - 📄 **HoverCard.tsx**: Hover card component.
-      - 📄 **Model.tsx**: Model component.
-      - 📄 **Separator.tsx**: Separator component.
-      - 📄 **Skeleton.tsx**: Skeleton loader component.
-      - 📄 **ToolTip.tsx**: Tooltip component.
-      - 📄 **Typography.tsx**: Typography components.
-    - 📁 **hooks/**
-      - 📄 **useTheme.ts**: Hook for theme management.
-      - 📄 **index.ts**: Exports for hooks.
-    - 📁 **shared/**
-      - 📄 **index.ts**: Entry point for shared components.
-  - 📄 **App.tsx**: Main application component.
-  - 📄 **main.tsx**: Entry point for the React application.
-  - 📄 **tailwind.css**: Tailwind CSS configuration.
-  - 📄 **vite-env.d.ts**: TypeScript definitions for Vite.
-
-#### 📄 Configuration Files
-- 📄 **.eslintignore**: ESLint ignore file.
-- 📄 **.eslintrc.cjs**: ESLint configuration.
-- 📄 **.gitignore**: Git ignore file.
-- 📄 **LICENCE.md**: Project license information.
-- 📄 **README.md**: Project documentation.
-- 📄 **SECURITY.md**: Security guidelines.
-- 📄 **cspell.json**: Spell checker configuration.
-- 📄 **index.html**: HTML template.
-- 📄 **package.json**: Project metadata and dependencies.
-- 📄 **pnpm-lock.yaml**: PNPM lock file for dependency versions.
-- 📄 **postcss.config.js**: PostCSS configuration.
-- 📄 **tailwind.config.js**: Tailwind CSS configuration.
-- 📄 **tsconfig.json**: TypeScript configuration.
-- 📄 **tsconfig.node.json**: Node-specific TypeScript configuration.
-- 📄 **vite.config.ts**: Vite configuration file.
-
-
-
-
 
 todo   bottom one
 
