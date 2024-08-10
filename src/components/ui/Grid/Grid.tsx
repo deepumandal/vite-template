@@ -17,12 +17,6 @@ type GridProps = CommonProps<"Grid"> & {
   // aspectRatio
 };
 
-/**
- * Grid component for creating grid layouts with Tailwind CSS.
- *
- * @param {GridProps} props - The props for the Grid component.
- * @returns {JSX.Element} The rendered grid container component.
- */
 const Grid = forwardRef<AnyType, GridProps>(
   (
     {
@@ -55,7 +49,7 @@ const Grid = forwardRef<AnyType, GridProps>(
         gridLines && "gridLines",
         gridColumnsObj[columns],
         gapObj[gap],
-        border && "border border-red",
+        border && "app-border",
         color[BackgroundColor] as ClassType,
         className
       )}

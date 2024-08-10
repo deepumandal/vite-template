@@ -1,0 +1,20 @@
+.accordion-root {
+  @apply w-full;
+}
+
+.accordion-trigger {
+  @apply flex
+  flex-1
+  text-heading
+  items-center
+  justify-between
+  py-4
+  font-medium
+  /* transition-all */
+  hover:underline
+  /* [&[data-state=open]>svg]:rotate-180; */;
+
+  .accordion-icon {
+    @apply h-4 w-4 shrink-0 transition-transform duration-200;
+  }
+}

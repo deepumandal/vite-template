@@ -1,0 +1,70 @@
+.h1 {
+  @apply text-4xl font-extrabold leading-tight tracking-tight;
+}
+
+.h2 {
+  @apply text-3xl font-bold leading-snug tracking-tight;
+}
+
+.h3 {
+  @apply text-2xl font-semibold leading-normal tracking-tight;
+}
+.h4 {
+  @apply text-xl font-medium leading-normal tracking-tight;
+}
+.h5 {
+  @apply text-lg font-medium leading-snug tracking-tight;
+}
+.h6 {
+  @apply text-base font-medium leading-snug tracking-tight;
+}
+
+.p {
+  @apply text-base font-normal leading-normal tracking-normal;
+}
+
+.span {
+  @apply text-base font-normal leading-normal tracking-normal;
+}
+
+.strong {
+  @apply text-base font-semibold leading-normal tracking-normal;
+}
+
+.header-default-variant {
+  @apply text-heading;
+}
+.header-accent-variant {
+  @apply text-accent;
+}
+.header-destructive-variant {
+  @apply text-destructive;
+}
+.header-muted-variant {
+  @apply text-muted;
+}
+.header-primary-variant {
+  @apply text-primary;
+}
+.header-secondary-variant {
+  @apply text-secondary;
+}
+
+.text-default-variant {
+  @apply text-text;
+}
+.text-accent-variant {
+  @apply text-accent;
+}
+.text-destructive-variant {
+  @apply text-destructive;
+}
+.text-muted-variant {
+  @apply text-muted;
+}
+.text-primary-variant {
+  @apply text-primary;
+}
+.text-secondary-variant {
+  @apply text-secondary;
+}

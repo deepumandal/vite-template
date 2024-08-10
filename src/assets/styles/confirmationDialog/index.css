@@ -1,0 +1,23 @@
+.dialog-content {
+  @apply !top-[30%];
+}
+
+.dialog-title {
+  @apply !text-lg !font-semibold;
+}
+
+.dialog-description {
+  @apply !text-sm !mt-4;
+}
+
+.dialog-footer {
+  @apply !mt-6;
+}
+
+.dialog-delete {
+  @apply !px-4;
+}
+
+.dialog-close {
+  @apply px-4;
+}

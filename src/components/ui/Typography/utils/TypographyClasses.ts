@@ -7,35 +7,35 @@ type asElementObjectType = {
 };
 
 const asElementObject: asElementObjectType = {
-  h1: "text-4xl font-extrabold leading-tight tracking-tight",
-  h2: "text-3xl font-bold leading-snug tracking-tight",
-  h3: "text-2xl font-semibold leading-normal tracking-tight",
-  h4: "text-xl font-medium leading-normal tracking-tight",
-  h5: "text-lg font-medium leading-snug tracking-tight",
-  h6: "text-base font-medium leading-snug tracking-tight",
-  p: "text-base font-normal leading-normal tracking-normal",
-  span: "text-base font-normal leading-normal tracking-normal",
-  strong: "text-base font-semibold leading-normal tracking-normal",
+  h1: "h1",
+  h2: "h2",
+  h3: "h3",
+  h4: "h4",
+  h5: "h5",
+  h6: "h6",
+  p: "p",
+  span: "span",
+  strong: "strong",
 } as const;
 
 type Variants = Exclude<ColorVariantsType, "background">;
 
 const HeadingVariants: Record<Variants, ClassType> = {
-  default: "text-heading",
-  accent: "text-accent",
-  destructive: "text-destructive",
-  muted: "text-muted",
-  primary: "text-primary",
-  secondary: "text-secondary",
+  default: "header-default-variant",
+  accent: "header-accent-variant",
+  destructive: "header-destructive-variant",
+  muted: "header-muted-variant",
+  primary: "header-primary-variant",
+  secondary: "header-secondary-variant",
 } as const;
 
 const TextVariants: Record<Variants, ClassType> = {
-  default: "text-text",
-  accent: "text-accent",
-  destructive: "text-destructive",
-  muted: "text-muted",
-  primary: "text-primary",
-  secondary: "text-secondary",
+  default: "text-default-variant",
+  accent: "text-accent-variant",
+  destructive: "text-destructive-variant",
+  muted: "text-muted-variant",
+  primary: "text-primary-variant",
+  secondary: "text-secondary-variant",
 } as const;
 
 export {

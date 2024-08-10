@@ -1,0 +1,42 @@
+.base-button {
+  @apply inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50;
+}
+
+.default-button {
+  @apply text-heading-dark bg-primary hover:bg-primary/80;
+}
+
+.destructive-button {
+  @apply bg-destructive text-heading-dark hover:bg-destructive/80;
+}
+
+.outline-button {
+  @apply border border-input text-heading bg-transparent hover:bg-secondary;
+}
+
+.ghost-button {
+  @apply bg-transparent text-heading hover:bg-secondary/55 dark:hover:bg-secondary-dark/55;
+}
+
+.secondary-button {
+  @apply bg-secondary text-heading hover:bg-secondary/80;
+}
+
+.button-link {
+  @apply text-primary underline-offset-4 hover:underline;
+}
+
+.button-default-size {
+  @apply h-10 px-5 py-2;
+}
+.button-small-size {
+  @apply h-9 rounded-md px-2;
+}
+
+.button-large-size {
+  @apply h-11 rounded-md px-7;
+}
+
+.button-icon {
+  @apply h-10 w-10;
+}

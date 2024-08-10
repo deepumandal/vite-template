@@ -6,14 +6,7 @@ const Avatar = forwardRef<
   ElementRef<typeof RadixAvatar.Root>,
   ComponentPropsWithoutRef<typeof RadixAvatar.Root>
 >(({ className, ...props }, ref) => (
-  <RadixAvatar.Root
-    ref={ref}
-    className={cn(
-      "relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full",
-      className
-    )}
-    {...props}
-  />
+  <RadixAvatar.Root ref={ref} className={cn("avatar", className)} {...props} />
 ));
 Avatar.displayName = RadixAvatar.Root.displayName;
 
@@ -23,7 +16,7 @@ const AvatarImage = forwardRef<
 >(({ className, ...props }, ref) => (
   <RadixAvatar.Image
     ref={ref}
-    className={cn("aspect-square h-full w-full", className)}
+    className={cn("avatar-image", className)}
     {...props}
   />
 ));
@@ -35,16 +28,12 @@ const AvatarFallback = forwardRef<
 >(({ className, ...props }, ref) => (
   <RadixAvatar.Fallback
     ref={ref}
-    className={cn(
-      "flex h-full w-full items-center justify-center rounded-full bg-muted",
-      className
-    )}
+    className={cn("avatar-fallback", className)}
     {...props}
   />
 ));
 AvatarFallback.displayName = RadixAvatar.Fallback.displayName;
 
-// Define an interface for Avatar component with Image and Fallback properties
 interface AvatarComponent
   extends React.ForwardRefExoticComponent<
     ComponentPropsWithoutRef<typeof RadixAvatar.Root> &
@@ -54,7 +43,6 @@ interface AvatarComponent
   Fallback: typeof AvatarFallback;
 }
 
-// Cast Avatar to AvatarComponent
 const AvatarWithComponents = Avatar as AvatarComponent;
 AvatarWithComponents.Image = AvatarImage;
 AvatarWithComponents.Fallback = AvatarFallback;

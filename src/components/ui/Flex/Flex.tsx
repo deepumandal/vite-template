@@ -52,7 +52,7 @@ const Flex = forwardRef<AnyType, FlexProps>(
       role={role}
       className={cn(
         "flex",
-        border && "border border-border-red",
+        border && "app-border",
         justifyObj[justifyContent],
         directionObj[flexDirection],
         alignItemsObj[alignItems],

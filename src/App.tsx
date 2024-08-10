@@ -81,9 +81,9 @@ const App = () => (
     </Flex>
 
     <Flex asElement="section" className="w-96">
-      <Accordion type="single">
+      <Accordion type="multiple">
         <Accordion.Item value="item1">
-          <Accordion.Trigger>Section 1</Accordion.Trigger>
+          <Accordion.Trigger rotate={false}>Section 1</Accordion.Trigger>
           <Accordion.Content>
             This is the content for section 1.
           </Accordion.Content>
