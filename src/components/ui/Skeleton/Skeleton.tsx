@@ -4,10 +4,7 @@ const Skeleton = ({
   className,
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) => (
-  <div
-    className={cn("animate-pulse rounded-md bg-muted-light/20", className)}
-    {...props}
-  />
+  <div className={cn("skeleton", className)} {...props} />
 );
 
 export { Skeleton };

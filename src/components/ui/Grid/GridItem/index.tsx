@@ -46,7 +46,7 @@ const GridItem = forwardRef<AnyType, GridItemProps>(
       aria-live={ariaLive}
       role={role}
       className={cn(
-        border && "border border-red",
+        border && "app-border",
         color[BackgroundColor] as ClassType,
         className
       )}

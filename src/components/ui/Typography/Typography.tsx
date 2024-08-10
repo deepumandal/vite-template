@@ -37,7 +37,7 @@ const Typography = ({
     className={cn(
       "flex",
       asElementObject[Element],
-      border && "border border-red",
+      border && "app-border",
       isHeading(Element)
         ? HeadingVariants[variants as keyof typeof HeadingVariants]
         : TextVariants[variants as keyof typeof HeadingVariants],
