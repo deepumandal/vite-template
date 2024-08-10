@@ -1,1 +1,7 @@
-/* layout css */
+.base-container {
+  @apply p-2 overflow-x-hidden Hide-Scroll-Track mx-auto;
+}
+
+.full-height {
+  @apply h-full min-h-screen;
+}

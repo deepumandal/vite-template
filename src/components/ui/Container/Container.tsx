@@ -25,10 +25,10 @@ const Container = forwardRef<AnyType, ContainerProps>(
     <Element
       ref={ref}
       className={cn(
-        "p-2 overflow-x-hidden Hide-Scroll-Track mx-auto",
+        "base-container",
         ScreenType == "container" ? "container" : "w-full",
-        border && "border border-border-red",
-        fullHeight ? "h-full min-h-screen" : "",
+        border && "app-border",
+        fullHeight ? "full-height" : "",
         className
       )}
       role={role}
