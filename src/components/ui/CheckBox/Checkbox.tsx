@@ -9,7 +9,7 @@ const Checkbox = forwardRef<
 >(({ className, ...props }, ref) => (
   <CheckboxPrimitive.Root
     ref={ref}
-    className={cn("checkbox", className)}
+    className={cn("peer checkbox", className)}
     {...props}
   >
     <CheckboxPrimitive.Indicator className={cn("checkbox-indicator")}>
