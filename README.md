@@ -1,7 +1,7 @@
 <p align="center">
-  <img src="./docs/_images/react.svg" alt="React Logo" height="120"/>
+  <img src="https://media3.giphy.com/media/eNAsjO55tPbgaor7ma/giphy.gif?cid=6c09b952f26cn8gocpfbyhkfit4z4ktpt4nwi7ba49rl0jam&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=s" alt="React Logo" height="120"/>
   <img src="./docs/_images/vite.png" alt="Vite Logo"  height="120"/> 
-  <img src="./docs/_images/typescript.png" alt="TypeScript Logo"  height="120"/>
+  <img src="https://cdn3d.iconscout.com/3d/free/thumb/free-typescript-11492969-9325304.png?f=webp" alt="TypeScript Logo"  height="120"/>
 </p>
 
 <h1 align="center">React Template</h1>
