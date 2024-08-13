@@ -1,4 +1,3 @@
-
 ```mermaid
 graph TD
     A[Types]
@@ -50,4 +49,3 @@ graph TD
     C2 --> C3
     C3 --> C4
 ```
-

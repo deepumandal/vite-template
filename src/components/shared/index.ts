@@ -1,5 +1,1 @@
-/**
- *
- *  build common components here.
- *
- */
+export { Label } from "./Label";
