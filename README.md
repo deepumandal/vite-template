@@ -132,7 +132,7 @@ vite-template/
 │   ├── components/
 │   ├── pages/
 │   ├── styles/
-│   ├── App.vue
+│   ├── App.ts
 │   ├── main.js
 │   └── router.js
 ├── .eslintrc.js
