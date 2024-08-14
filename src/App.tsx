@@ -17,17 +17,7 @@ import {
   Users,
 } from "lucide-react";
 import { useState } from "react";
-import { useForm } from "react-hook-form";
 import { useTheme } from "@Components/hooks";
-import {
-  Form,
-  FormControl,
-  FormDescription,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@Components/shared/Form/Form";
 import {
   Container,
   Button,
@@ -57,7 +47,6 @@ const App = () => (
     border
     className="p-20 mb-40 flex items-center flex-col"
   >
-    <FormComponent />
     <Flex flexDirection="column" className="gap-10" alignItems="center">
       <ThemeBtn />
       <Flex className="gap-5 flex-wrap" justifyContent="center">
@@ -90,6 +79,7 @@ const App = () => (
         </Model>
       </Flex>
     </Flex>
+
     <Flex asElement="section" className="w-96">
       <Accordion type="multiple">
         <Accordion.Item value="item1">
@@ -140,6 +130,7 @@ const App = () => (
       <Badge variant="outline">Java</Badge>
       <Badge variant="secondary">Python</Badge>
     </Flex>
+
     <Flex asElement="section" className="mt-5">
       <Breadcrumb>
         <Breadcrumb.List>
@@ -202,6 +193,7 @@ const App = () => (
         <ContextMenu.Item>hello</ContextMenu.Item>
       </ContextMenu.Content>
     </ContextMenu>
+
     <Flex asElement="section" className="w-full">
       <Tooltip.Provider>
         <Tooltip>
@@ -212,9 +204,11 @@ const App = () => (
         </Tooltip>
       </Tooltip.Provider>
     </Flex>
+
     <Flex asElement="section" className="w-full">
       <HoverCardDemo />
     </Flex>
+
     <Flex asElement="section" className="w-full space-x-2" alignItems="center">
       <Skeleton className="h-12 w-12 rounded-full" />
       <div className="space-y-2">
@@ -222,6 +216,7 @@ const App = () => (
         <Skeleton className="h-4 w-[200px]" />
       </div>
     </Flex>
+
     <Flex asElement="section" className="mt-10">
       <Block>
         <Block className="space-y-1">
@@ -337,34 +332,6 @@ const App = () => (
     </Flex>
   </Container>
 );
-
-const FormComponent = () => {
-  const form = useForm();
-
-  return (
-    <Flex asElement="section">
-      <Form {...form}>
-        <FormField
-          control={form.control}
-          name="username"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Username</FormLabel>
-              <FormControl>
-                <input {...field} placeholder="shadCn" />
-                {/* <Input placeholder="shadCn" {...field} /> */}
-              </FormControl>
-              <FormDescription>
-                This is your public display name.
-              </FormDescription>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-      </Form>
-    </Flex>
-  );
-};
 
 const AreYouSure = () => {
   const [open, setOpen] = useState<boolean>(false);
