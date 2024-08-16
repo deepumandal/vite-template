@@ -82,7 +82,6 @@
       "pnpm spellcheck"
     ],
     "./**/*.md": [
-      "prettier --write",
       "pnpm spellcheck"
     ]
   },
