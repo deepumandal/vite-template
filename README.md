@@ -230,56 +230,63 @@ Whether you're a seasoned developer or just getting started, this Vite template 
 
 ### Commands
 
-- **Start Development Server**: `npm run dev` or `yarn dev`
-- **Build for Production**: `npm run build` or `yarn build`
-- **Preview Production Build**: `npm run serve` or `yarn serve`
-- **Lint Code**: `npm run lint` or `yarn lint`
-- **Format Code**: `npm run prettier:write` or `yarn prettier:write`
-- **Check Types**: `npm run check-types` or `yarn check-types`
-- **Spell Check**: `npm run spellcheck` or `yarn spellcheck`
+- **Start Development Server**:
+
+  - `npm run start`
+  - `yarn start`
+  - `pnpm start`
+
+- **Build for Production**:
+
+  - `npm run build`
+  - `yarn build`
+  - `pnpm build`
+
+- **Lint Code**:
+
+  - `npm run lint`
+  - `yarn lint`
+  - `pnpm lint`
+
+- **Format Code**:
+
+  - `npm run prettier:write`
+  - `yarn prettier:write`
+  - `pnpm prettier:write`
+
+- **Check Types**:
+
+  - `npm run check-types`
+  - `yarn check-types`
+  - `pnpm check-types`
+
+- **Spell Check**:
+  - `npm run spellcheck`
+  - `yarn spellcheck`
+  - `pnpm spellcheck`
 
 ### Recommended Extensions
 
 #### VSCode Extensions:
 
-- **ESLint**
-- **Prettier - Code formatter**
+- ESLint
+- Prettier - Code formatter
+- TailwindCSS
 
-## Built-in Tools
+## Built with Tools
 
-- **Vite**: Fast and optimized development build tool.
-- **ESLint**: Linting to maintain code quality.
-- **Prettier**: Code formatting for consistency.
-- **Tailwind CSS**: Utility-first CSS framework.
-- **TypeScript**: Optional support for TypeScript.
+| TypeScript | React | React Hook Form | Radix UI | clsx |
+|------------|-------|-----------------|----------|------|
+| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" width="40" height="40"> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="40" height="40"> | <img src="https://react-hook-form.com/logo.svg" width="40" height="40"> | <img src="https://avatars.githubusercontent.com/u/75185867?s=200&v=4" width="40" height="40"> | <img src="https://raw.githubusercontent.com/lukeed/clsx/main/media/logo.svg" width="40" height="40"> |
 
-## Configuration
+| Lucide React | Prettier | Tailwind CSS | React DOM | Zod |
+|--------------|----------|--------------|-----------|-----|
+| <img src="https://lucide.dev/icons/logo/lucide.svg" width="40" height="40"> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prettier/prettier-original.svg" width="40" height="40"> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" width="40" height="40"> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="40" height="40"> | <img src="https://pbs.twimg.com/profile_images/1508824447731433476/TplYb09L_400x400.png" width="40" height="40"> |
 
-### ESLint
+| cspell | Vite | ESLint | Husky | ts-node |
+|--------|------|--------|-------|---------|
+| <img src="https://github.com/streetsidesoftware/cspell/raw/main/packages/cspell/assets/cspell-logo.png" width="40" height="40"> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg" width="40" height="40"> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/eslint/eslint-original.svg" width="40" height="40"> | <img src="https://typicode.github.io/husky/assets/img/icon.svg" width="40" height="40"> | <img src="https://github.com/TypeStrong/ts-node/raw/main/logo.svg" width="40" height="40"> |
 
-ESLint is pre-configured with a set of rules to maintain code quality. You can customize the configuration in `.eslintrc.js`.
-
-### Prettier
-
-Prettier is used for code formatting. You can adjust the settings in `.prettierrc`.
-
-### Tailwind CSS
-
-Tailwind CSS is included for utility-first styling. The configuration is available in `tailwind.config.js`.
-
-## Pros and Cons
-
-### Pros
-
-- **Fast Development**: Instant server start and fast HMR.
-- **Minimal Configuration**: Get started quickly without extensive setup.
-- **Modern Features**: Leverage the latest JavaScript and CSS.
-- **Extensible**: Easily integrate with other tools.
-
-### Cons
-
-- **Learning Curve**: Requires understanding of modern JavaScript and tooling.
-- **Initial Setup**: Some initial setup required for new developers.
 
 ## Contribution Guidelines
 
@@ -321,37 +328,27 @@ We welcome contributions from the community. Please follow these steps to contri
 +---------+-----------+
 ```
 
+```mermaid
+graph TD
+    A[Clone Repository]
+    A --> B[Install Dependencies]
+    B --> C[Start Dev Server]
+    C --> D[Develop & Test]
+    D --> E[Build for Production]
+
+```
+
 ### Contribution Process
 
-```plaintext
-+---------------------+
-| Fork Repository     |
-+---------+-----------+
-          |
-          v
-+---------+-----------+
-| Create Branch       |
-+---------+-----------+
-          |
-          v
-+---------+-----------+
-| Make Changes        |
-+---------+-----------+
-          |
-          v
-+---------+-----------+
-| Commit Changes      |
-+---------+-----------+
-          |
-          v
-+---------+-----------+
-| Push to Branch      |
-+---------+-----------+
-          |
-          v
-+---------+-----------+
-| Open Pull Request   |
-+---------------------+
+```mermaid
+graph TD
+    A[Fork Repository]
+    A --> B[Create Branch]
+    B --> C[Make Changes]
+    C --> D[Commit Changes]
+    D --> E[Push to Branch]
+    E --> F[Open Pull Request]
+
 ```
 
 ## FAQ
@@ -376,10 +373,10 @@ yarn add <dependency-name>
 
 ### How do I customize the ESLint or Prettier configuration?
 
-You can modify the configuration files `.eslintrc.js` and `.prettierrc` to fit your preferences.
+You can modify the configuration files `.eslintrc.js` to fit your preferences.
 
 ## License
 
-This project is licensed under the MIT License. See the `LICENSE` file for more details.
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE.md) file for more details.
 
-Thank you for using our Vite template! If you have any questions or feedback, feel free to open an issue or contribute to the project. Happy coding!
+Thank you for using our Vite template! If you have any questions or feedback, feel free to open an issue or contribute to the project. Happy coding! 🚀
