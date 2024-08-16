@@ -10,7 +10,7 @@
 </p>
 <br>
 <p align="center">
-<a href="https://mermaid.live/"><b>Live Projects!</b></a>
+<a href="https://deepumandal.github.io/vite-template/"><b>Live!</b></a>
 </p>
 <p align="center">
 <a href="https://https://github.com/deepumandal/vite-template/blob/master/README.md">📖 Documentation </a> |
