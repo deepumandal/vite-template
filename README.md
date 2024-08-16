@@ -269,9 +269,9 @@ Whether you're a seasoned developer or just getting started, this Vite template 
 
 #### VSCode Extensions:
 
-- ESLint
-- Prettier - Code formatter
-- TailwindCSS
+- **ESLint**
+- **Prettier - Code formatter**
+- **TailwindCSS**
 
 ## Built with Tools
 
@@ -301,32 +301,6 @@ We welcome contributions from the community. Please follow these steps to contri
 ## Flowcharts
 
 ### Development Workflow
-
-```plaintext
-+---------------------+
-| Clone Repository    |
-+---------+-----------+
-          |
-          v
-+---------+-----------+
-| Install Dependencies|
-+---------+-----------+
-          |
-          v
-+---------+-----------+
-| Start Dev Server    |
-+---------+-----------+
-          |
-          v
-+---------+-----------+
-| Develop & Test      |
-+---------+-----------+
-          |
-          v
-+---------+-----------+
-| Build for Production|
-+---------+-----------+
-```
 
 ```mermaid
 graph TD
