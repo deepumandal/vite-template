@@ -33,15 +33,13 @@
 
 # Objective
 
-Welcome to the **Vite Template** project! 🚀
-
 This template is designed to supercharge your frontend development experience by providing a pre-configured setup that reduces the repetitive tasks you often face when starting a new project. Whether you're a seasoned developer or just getting started, this template has everything you need to kickstart your next project with minimal hassle.
 
 # Table of Contents
 
 1. [Introduction](#introduction)
 2. [Key Features](#key-features)
-3. [Why Vite?](#why-vite)
+3. [Why Vite Template?](#why-vite-template)
 4. [Getting Started](#getting-started)
 5. [Project Structure](#project-structure)
 6. [Development Workflow](#development-workflow)
@@ -54,6 +52,8 @@ This template is designed to supercharge your frontend development experience by
 13. [License](#license)
 
 ## Introduction
+
+Welcome to the **Vite Template** project! 🚀
 
 This Vite template aims to streamline the process of setting up a new frontend project. With modern tools and best practices built-in, you can focus more on developing your application and less on configuring your environment.
 
@@ -82,23 +82,46 @@ This Vite template aims to streamline the process of setting up a new frontend p
 - **Comprehensive Docs:** In-depth documentation to guide you through the setup and usage.
 - **Modern Design:** User-friendly and easy-to-navigate documentation structure.
 
-## Why Vite?
+## Why Vite Template?
 
-Vite is a next-generation frontend build tool that significantly improves the development experience. It leverages native ES modules in the browser for faster builds and hot module replacement. Here are some reasons to choose Vite:
+### Problem
 
-- **Performance**: Instant server start and fast HMR.
-- **Simplicity**: Minimal configuration required to get started.
-- **Modern**: Supports the latest JavaScript and CSS features.
-- **Extensible**: Easy to integrate with other tools and libraries.
+Starting a new React application often involves repetitive tasks such as setting up Vite, configuring linting rules, integrating Tailwind CSS, building UI components, setting up lint-staged, and more. These steps can be time-consuming and prone to errors, slowing down your development process.
+
+### Solution
+
+This Vite template is designed to supercharge your frontend development experience by providing a pre-configured setup that reduces these repetitive tasks. It includes the latest tech stacks and configurations, ensuring you have everything you need to kickstart your next project with minimal hassle:
+
+- **ESLint**: Pre-configured linting rules to maintain code quality.
+- **Prettier**: Code formatting setup to ensure consistency across your codebase.
+- **Husky**: Pre-commit hooks to run tasks such as linting and tests before committing code.
+- **Predefined UI Components**: A set of reusable UI components to accelerate your development.
+
+### Impact
+
+Adopting this Vite template brings several significant benefits
+
+- **Enhanced Developer Experience:** Spend less time on setup and more time on building features, thanks to the pre-configured setup.
+- **Improved Productivity:** With essential tools and configurations already in place, you can quickly start coding without worrying about the boilerplate setup.
+- **Consistency and Quality:** Pre-configured linting and formatting tools ensure a consistent and high-quality codebase.
+- **Future-Proof:** The template includes the latest best practices and technologies, keeping your project up-to-date with minimal effort.
+
+Whether you're a seasoned developer or just getting started, this Vite template provides a robust foundation for your project, allowing you to focus on what matters most: building amazing applications
 
 ## Getting Started
 
 ### Prerequisites
 
 - Node.js (version 14.0.0 or higher)
-- npm or yarn
+- npm or yarn or pnpm
+
+> **Note:** This is suggested use pnpm over npm and yarn.
 
 ### Installation
+
+1. **Use this Template:**
+
+   - click on use this template
 
 1. **Clone the repository:**
 
@@ -107,50 +130,101 @@ Vite is a next-generation frontend build tool that significantly improves the de
    cd vite-template
    ```
 
-2. **Install dependencies:**
+1. **Install dependencies:**
 
    ```sh
    npm install
    # or
    yarn install
+   # or
+   pnpm install
    ```
 
-3. **Start the development server:**
+1. **Start the development server:**
    ```sh
    npm run dev
    # or
    yarn dev
+   # or
+   pnpm install
    ```
 
 ## Project Structure
 
 ```plaintext
-vite-template/
-├── public/
-├── src/
-│   ├── assets/
-│   ├── components/
-│   ├── pages/
-│   ├── styles/
-│   ├── App.ts
-│   ├── main.js
-│   └── router.js
-├── .eslintrc.js
-├── .prettierrc
-├── index.html
-├── package.json
-└── vite.config.js
+📂 .github                             # GitHub actions and CI/CD pipelines
+└── 📂 workflows
+    └── 📄 codeql.yml                  # Configuration for GitHub CodeQL analysis
+📂 .husky
+└── 📄 pre-commit                      # Husky pre-commit hook script
+📂 docs                                # Documentation files for the template
+📂 public                              # Publicly accessible static files
+📂 src                                 # Source folder
+├── 📂 @types                          # TypeScript type definitions
+├── 📂 assets                          # Static assets
+│   ├── 📂 fonts                       # Custom font files
+│   ├── 📂 styles                      # All CSS files for components
+│   └── 📂 svg                         # SVG media files
+├── 📂 components                      # components
+│   ├── 📂 HOC                         # Higher-Order Components
+│   ├── 📂 config                      # Configuration for components
+│   │   ├── 📂 ui                      # UI component configurations
+│   │   └── 📄 index.ts                # Entry point for config
+│   ├── 📂 hooks                       # Custom React hooks
+│   │   ├── 📂 useTheme                # Hook for theme management
+│   │   └── 📄 index.ts                # Entry point for hooks
+│   ├── 📂 shared                      # Shared components and utilities
+│   │   ├── 📂 Form                    # Form component files
+│   │   ├── 📂 Label                   # Label component files
+│   │   └── 📄 index.ts                # Entry point for shared components
+│   ├── 📂 ui                          # UI components
+│   │   ├── 📂 Accordion               # Accordion component files
+│   │   ├── 📂 Avatar                  # Avatar component files
+│   │   ├── 📂 Badge                   # Badge component files
+│   │   ├── 📂 Block                   # Block component files
+│   │   ├── 📂 Breadcrumb              # Breadcrumb component files
+│   │   ├── 📂 Button                  # Button component files
+│   │   ├── 📂 CheckBox                # CheckBox component files
+│   │   ├── 📂 Common                  # Common UI components
+│   │   ├── 📂 ConfirmationDialog      # Confirmation Dialog component files
+│   │   ├── 📂 Container               # Container component files
+│   │   ├── 📂 ContextMenu             # Context Menu component files
+│   │   ├── 📂 DropDownMenu            # DropDown Menu component files
+│   │   ├── 📂 Flex                    # Flex component files
+│   │   ├── 📂 Grid                    # Grid component files
+│   │   ├── 📂 HoverCard               # HoverCard component files
+│   │   ├── 📂 Model                   # Model component files
+│   │   ├── 📂 Separator               # Separator component files
+│   │   ├── 📂 Skeleton                # Skeleton component files
+│   │   ├── 📂 ToolTip                 # ToolTip component files
+│   │   ├── 📂 Typography              # Typography component files
+│   │   └── 📄 index.ts                # Entry point for UI components
+├── 📂 utils                          # Utility functions and helpers
+│   └── 📂 className                  # Utility functions for class names
+├── 📄 App.tsx                        # Main application component
+├── 📄 main.tsx                       # Entry point of the application
+├── 📄 tailwind.css                   # Tailwind CSS configuration
+└── 📄 vite-env.d.ts                  # TypeScript environment definitions for Vite
+📄 .eslintignore                      # List of files and directories ignored by ESLint
+📄 .eslintrc.cjs                      # ESLint configuration file
+📄 .gitignore                         # List of files and directories ignored by Git
+📄 LICENCE.md                         # License information
+📄 README.md                          # Main README file with project overview
+📄 SECURITY.md                        # Security policies and guidelines
+📄 cspell.json                        # Configuration for cspell (spell checker)
+📄 index.html                         # Main HTML file for the application
+📄 package.json                       # Project dependencies and scripts
+📄 pnpm-lock.yaml                     # Lockfile for pnpm package manager
+📄 postcss.config.js                  # PostCSS configuration
+📄 tailwind.config.js                 # Tailwind CSS configuration
+📄 tsconfig.json                      # TypeScript configuration
+📄 tsconfig.node.json                 # TypeScript configuration for Node.js
+📄 vite.config.ts                     # Vite configuration file
+
+
 ```
 
-- public/: Static assets.
-- src/: Main source code.
-- assets/: Static files like images and fonts.
-- components/: Reusable components.
-- pages/: Page components.
-- styles/: Global styles.
-- App.vue: Root component.
-- main.js: Entry point.
-- router.js: Routing configuration.
+> Here is the basic overview of folder structure.
 
 ## Development Workflow
 
@@ -160,7 +234,9 @@ vite-template/
 - **Build for Production**: `npm run build` or `yarn build`
 - **Preview Production Build**: `npm run serve` or `yarn serve`
 - **Lint Code**: `npm run lint` or `yarn lint`
-- **Format Code**: `npm run format` or `yarn format`
+- **Format Code**: `npm run prettier:write` or `yarn prettier:write`
+- **Check Types**: `npm run check-types` or `yarn check-types`
+- **Spell Check**: `npm run spellcheck` or `yarn spellcheck`
 
 ### Recommended Extensions
 
