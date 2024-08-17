@@ -277,7 +277,7 @@ Whether you're a seasoned developer or just getting started, this Vite template 
 
 | TypeScript | React | React Hook Form | Radix UI | clsx |
 |------------|-------|-----------------|----------|------|
-| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" width="40" height="40"> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="40" height="40"> | <img src="https://react-hook-form.com/logo.svg" width="40" height="40"> | <img src="https://avatars.githubusercontent.com/u/75185867?s=200&v=4" width="40" height="40"> | <img src="https://raw.githubusercontent.com/lukeed/clsx/main/media/logo.svg" width="40" height="40"> |
+| <img src="https://cdn3d.iconscout.com/3d/free/thumb/free-typescript-3d-icon-download-in-png-blend-fbx-gltf-file-formats--ts-programming-code-logos-and-brands-pack-icons-9325304.png" width="40" height="40"> | <img src="https://cdn3d.iconscout.com/3d/free/thumb/free-react-3d-icon-download-in-png-blend-fbx-gltf-file-formats--facebook-logo-native-javascript-library-user-interfaces-coding-lang-pack-logos-icons-7578010.png?f=webp" width="40" height="40"> | <img src="https://miro.medium.com/v2/resize:fit:747/1*kOXZ2OTFrdmw28ZWzwT8ZQ.png" width="40" height="40"> | <img src="https://avatars.githubusercontent.com/u/75042455?s=280&v=4" width="40" height="40"> | <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5mRF1CHVQWQ2-GO75PM3f0-YVqS3bjfz-WQ&s" width="40" height="40"> |
 
 | Lucide React | Prettier | Tailwind CSS | React DOM | Zod |
 |--------------|----------|--------------|-----------|-----|
