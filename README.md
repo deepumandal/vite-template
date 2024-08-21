@@ -4,7 +4,7 @@
   <img src="https://cdn3d.iconscout.com/3d/free/thumb/free-typescript-11492969-9325304.png?f=webp" alt="TypeScript Logo"  height="120"/>
 </p>
 
-<h1 align="center">React Vite Template: Supercharge Your Frontend Development</h1>
+<h1 align="center">React Vite Template</h1>
 <p align="center">
 🚀 Modern React Template: 2024-Ready and Pre-Configured! 🚀
 </p>
